@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import professionalBanner from "@/assets/professional-hero-banner.jpg";
+import blueBanner from "@/assets/blue-hero-banner.jpg";
 
 const Hero = () => {
   return (
@@ -8,7 +8,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${professionalBanner})`,
+          backgroundImage: `url(${blueBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
