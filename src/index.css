@@ -36,11 +36,13 @@ All colors MUST be HSL.
     --input: 214 32% 91%;
     --ring: 203 62% 14%;
 
-    /* CVDS Brand Colors */
-    --cvds-primary: 203 62% 14%;        /* #0D2538 */
-    --cvds-secondary: 211 59% 24%;      /* #163E63 */
-    --cvds-accent: 16 100% 60%;         /* #FF6B35 */
-    --cvds-accent-hover: 16 100% 55%;   /* Darker orange */
+    /* CVDS Brand Colors - Based on Canva palette */
+    --cvds-primary: 189 71% 27%;        /* Bleu foncé/teal */
+    --cvds-secondary: 151 83% 53%;      /* Vert menthe */
+    --cvds-accent: 240 100% 50%;        /* Bleu royal */
+    --cvds-accent-hover: 240 100% 45%;  /* Bleu royal plus sombre */
+    --cvds-dark: 0 0% 15%;              /* Noir/gris très foncé */
+    --cvds-neutral: 0 0% 60%;           /* Gris */
     
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(var(--cvds-primary)) 0%, hsl(var(--cvds-secondary)) 100%);

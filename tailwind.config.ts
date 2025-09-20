@@ -52,6 +52,8 @@ export default {
           secondary: "hsl(var(--cvds-secondary))",
           accent: "hsl(var(--cvds-accent))",
           "accent-hover": "hsl(var(--cvds-accent-hover))",
+          dark: "hsl(var(--cvds-dark))",
+          neutral: "hsl(var(--cvds-neutral))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
