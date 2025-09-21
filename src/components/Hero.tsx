@@ -23,7 +23,7 @@ const Hero = () => {
           <img 
             src={cvdsLogo} 
             alt="CVDS Digital Ventures Logo" 
-            className="h-32 md:h-40 lg:h-48 mx-auto mb-6 drop-shadow-2xl"
+            className="h-40 md:h-52 lg:h-64 xl:h-72 mx-auto mb-6 drop-shadow-2xl"
           />
         </div>
         
@@ -38,16 +38,10 @@ const Hero = () => {
         <Button 
           variant="cvds-hero" 
           size="lg"
-          className="text-lg px-8 py-4"
-          asChild
+          className="text-lg px-8 py-4 cursor-pointer"
+          onClick={() => window.open('https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition', '_blank')}
         >
-          <a 
-            href="https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition" 
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Propose Your Business
-          </a>
+          Propose Your Business
         </Button>
       </div>
       
