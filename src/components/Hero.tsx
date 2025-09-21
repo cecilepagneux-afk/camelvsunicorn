@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import blueBanner from "@/assets/blue-hero-banner.jpg";
+import newBanner from "@/assets/new-hero-banner.png";
+import cvdsLogo from "@/assets/cvds-logo.png";
 
 const Hero = () => {
   return (
@@ -8,7 +9,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${blueBanner})`,
+          backgroundImage: `url(${newBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -16,7 +17,16 @@ const Hero = () => {
       />
       
       {/* Content */}
-      <div className="relative z-20 text-center text-white px-6 max-w-4xl mx-auto">        
+      <div className="relative z-20 text-center text-white px-6 max-w-4xl mx-auto">
+        {/* Logo */}
+        <div className="mb-8">
+          <img 
+            src={cvdsLogo} 
+            alt="CVDS Digital Ventures Logo" 
+            className="h-20 md:h-24 mx-auto mb-4"
+          />
+        </div>
+        
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
           We Acquire Profitable Digital Businesses
         </h1>
