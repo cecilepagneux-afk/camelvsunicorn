@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import newBanner from "@/assets/new-hero-banner.png";
+import professionalBanner from "@/assets/professional-hero-banner.jpg";
 import cvdsLogo from "@/assets/cvds-logo.png";
 
 const Hero = () => {
@@ -9,7 +9,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${newBanner})`,
+          backgroundImage: `url(${professionalBanner})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -19,11 +19,11 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-20 text-center text-white px-6 max-w-4xl mx-auto">
         {/* Logo */}
-        <div className="mb-8">
+        <div className="mb-12">
           <img 
             src={cvdsLogo} 
             alt="CVDS Digital Ventures Logo" 
-            className="h-20 md:h-24 mx-auto mb-4"
+            className="h-32 md:h-40 lg:h-48 mx-auto mb-6 drop-shadow-2xl"
           />
         </div>
         
