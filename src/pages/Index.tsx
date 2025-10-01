@@ -1,9 +1,8 @@
 import Hero from "@/components/Hero";
 import WhyPartner from "@/components/WhyPartner";
 import WhatWeLookFor from "@/components/WhatWeLookFor";
-import About from "@/components/About";
-import LinkedInPost from "@/components/LinkedInPost";
-import Contact from "@/components/Contact";
+import HowItWorks from "@/components/HowItWorks";
+import FounderPromise from "@/components/FounderPromise";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -12,9 +11,8 @@ const Index = () => {
       <Hero />
       <WhyPartner />
       <WhatWeLookFor />
-      <About />
-      <LinkedInPost />
-      <Contact />
+      <HowItWorks />
+      <FounderPromise />
       <Footer />
     </div>
   );

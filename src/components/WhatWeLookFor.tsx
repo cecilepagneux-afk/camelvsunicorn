@@ -1,59 +1,47 @@
-import { Button } from "@/components/ui/button";
-import FeatureCard from "./FeatureCard";
+import { Check } from "lucide-react";
 
 const WhatWeLookFor = () => {
   const criteria = [
     {
-      icon: "💼",
-      title: "Business Models",
-      description: "SaaS, SEO sites, niche marketplaces, paid newsletters, micro-tools."
+      icon: "💻",
+      title: "SaaS with stable MRR"
     },
     {
-      icon: "💰",
-      title: "Financials",
-      description: "Revenue ≥ $20K/year · Net margin >25% · Price under $100K AUD."
+      icon: "📝",
+      title: "SEO / Content websites"
     },
     {
-      icon: "⚙️",
-      title: "Operations",
-      description: "Lean teams, ≤10h/week founder involvement, automated or easy to automate."
+      icon: "📧",
+      title: "Newsletters with engaged readers"
     }
   ];
 
   return (
     <section className="py-20 px-6 bg-gradient-to-b from-gray-50/50 to-background">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-cvds-primary mb-16">
-          What We Look For
+          What we buy
         </h2>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="space-y-6 mb-12">
           {criteria.map((criterion, index) => (
-            <FeatureCard
-              key={index}
-              icon={criterion.icon}
-              title={criterion.title}
-              description={criterion.description}
-            />
+            <div key={index} className="flex items-start gap-4 bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex-shrink-0 w-12 h-12 bg-cvds-primary/10 rounded-full flex items-center justify-center">
+                <Check className="w-6 h-6 text-cvds-primary" />
+              </div>
+              <div className="flex items-center gap-3">
+                <span className="text-3xl">{criterion.icon}</span>
+                <h3 className="text-xl font-semibold text-cvds-secondary">
+                  {criterion.title}
+                </h3>
+              </div>
+            </div>
           ))}
         </div>
         
-        <div className="text-center">
-          <Button 
-            variant="cvds-primary" 
-            size="lg"
-            className="text-lg px-10 py-4"
-            asChild
-          >
-            <a 
-              href="https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition" 
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              See If Your Business Fits
-            </a>
-          </Button>
-        </div>
+        <p className="text-center text-gray-600 text-sm">
+          Typical deal size: €50k – €500k
+        </p>
       </div>
     </section>
   );

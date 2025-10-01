@@ -28,11 +28,11 @@ const Hero = () => {
         </div>
         
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-          We Acquire Profitable Digital Businesses
+          Sell your digital business with confidence.
         </h1>
         
         <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
-          Specialising in SaaS, SEO sites, marketplaces & newsletters – with a human and growth-oriented approach.
+          Founder-friendly exits for SaaS, SEO sites & newsletters. Smooth, fair and international.
         </p>
         
         <Button 
@@ -41,7 +41,7 @@ const Hero = () => {
           className="text-lg px-8 py-4 cursor-pointer"
           onClick={() => window.open('https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition', '_blank')}
         >
-          Propose Your Business
+          📅 Book a free 15-min call
         </Button>
       </div>
       
