@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-cvds-dark py-16 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <div className="mb-8">
-          <h3 className="text-white text-xl font-semibold mb-6">Restons en contact</h3>
+          <h3 className="text-white text-xl font-semibold mb-6">Get in Touch</h3>
           <div className="flex justify-center space-x-8">
             <a 
               href="mailto:cecile.pagneux@hotmail.fr" 
