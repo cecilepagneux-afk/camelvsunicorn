@@ -13,6 +13,10 @@ const LinkedInPost = () => {
         
         <div className="bg-card rounded-lg shadow-lg overflow-hidden border border-border">
           <video 
+            autoPlay
+            loop
+            muted
+            playsInline
             controls 
             className="w-full"
             preload="metadata"
