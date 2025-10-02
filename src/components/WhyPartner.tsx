@@ -3,19 +3,19 @@ import FeatureCard from "./FeatureCard";
 const WhyPartner = () => {
   const features = [
     {
-      icon: "📈",
-      title: "Growth",
-      description: "We build on what you started"
-    },
-    {
-      icon: "🔄",
-      title: "Continuity", 
-      description: "Your business DNA stays alive"
-    },
-    {
       icon: "🤝",
-      title: "Founder-friendly",
-      description: "Smooth and fair exits"
+      title: "Smooth Transition",
+      description: "We ensure continuity and safeguard the founder's legacy with tailored support during handover."
+    },
+    {
+      icon: "📈",
+      title: "Growth Focus", 
+      description: "International expansion, automation, and digital marketing optimisation to scale your business further."
+    },
+    {
+      icon: "💡",
+      title: "Flexible Deals",
+      description: "Progressive payments, earn-outs, and vendor financing ensure alignment and shared success."
     }
   ];
 
@@ -23,7 +23,7 @@ const WhyPartner = () => {
     <section className="py-20 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-cvds-primary mb-16">
-          Why work with us?
+          Why Partner with CVDS Digital Ventures?
         </h2>
         
         <div className="grid md:grid-cols-3 gap-8">
