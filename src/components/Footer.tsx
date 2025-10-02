@@ -29,7 +29,7 @@ const Footer = () => {
         
         <div className="border-t border-cvds-neutral/30 pt-8">
           <p className="text-cvds-neutral text-sm">
-            © 2025 CVDS Digital Ventures · Tous droits réservés
+            © 2025 CVDS Digital Ventures · All rights reserved
           </p>
         </div>
       </div>
