@@ -23,7 +23,7 @@ const Hero = () => {
           <img 
             src={cvdsLogo} 
             alt="CVDS Digital Ventures Logo" 
-            className="h-40 md:h-52 lg:h-64 xl:h-72 mx-auto mb-6 drop-shadow-2xl"
+            className="h-52 md:h-64 lg:h-80 xl:h-96 mx-auto mb-6 drop-shadow-2xl"
           />
         </div>
         
