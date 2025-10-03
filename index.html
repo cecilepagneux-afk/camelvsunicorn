@@ -29,5 +29,40 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <script>
+      function sendGAEvent(name, params){
+        if (typeof gtag === 'function') {
+          gtag('event', name, params || {});
+        }
+      }
+
+      document.addEventListener('click', function(e){
+        const a = e.target.closest('a');
+        if(!a) return;
+        const href = (a.getAttribute('href') || '').toLowerCase();
+        const label = (a.textContent || '').trim();
+
+        // Calendly (Book a Call)
+        if (href.includes('calendly.com')) {
+          sendGAEvent('generate_lead', {method:'calendly', label: label});
+        }
+
+        // Propose Your Business (CTA principal)
+        if (label.includes('Propose Your Business')) {
+          sendGAEvent('cta_click', {button:'propose_business', label: label});
+        }
+
+        // Contact (email)
+        if (href.startsWith('mailto:')) {
+          sendGAEvent('contact_click', {channel:'email', label: label});
+        }
+
+        // LinkedIn
+        if (href.includes('linkedin.com')) {
+          sendGAEvent('outbound_click', {network:'linkedin', label: label});
+        }
+      });
+    </script>
   </body>
 </html>
