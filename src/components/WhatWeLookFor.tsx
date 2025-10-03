@@ -40,7 +40,7 @@ const WhatWeLookFor = () => {
         
         <div className="text-center">
           <Button 
-            variant="cvds-primary" 
+            variant="cvds-hero" 
             size="lg"
             className="text-xl px-12 py-6 h-auto"
             asChild
