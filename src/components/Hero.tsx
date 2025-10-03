@@ -38,7 +38,7 @@ const Hero = () => {
         <Button 
           variant="cvds-hero" 
           size="lg"
-          className="text-lg px-8 py-4 cursor-pointer"
+          className="text-xl px-12 py-6 cursor-pointer h-auto"
           onClick={() => window.open('https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition', '_blank')}
         >
           Propose Your Business

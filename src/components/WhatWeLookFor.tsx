@@ -42,7 +42,7 @@ const WhatWeLookFor = () => {
           <Button 
             variant="cvds-primary" 
             size="lg"
-            className="text-lg px-10 py-4"
+            className="text-xl px-12 py-6 h-auto"
             asChild
           >
             <a 
