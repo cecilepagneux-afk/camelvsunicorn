@@ -15,7 +15,7 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        "cvds-hero": "relative overflow-hidden bg-cvds-accent text-white font-semibold shadow-[0_4px_14px_0_hsl(var(--cvds-accent)/0.39)] hover:shadow-[0_6px_20px_0_hsl(var(--cvds-accent)/0.5)] transition-all duration-300 hover:-translate-y-0.5 before:absolute before:inset-0 before:bg-gradient-to-r before:from-cvds-secondary before:to-cvds-accent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300",
+        "cvds-hero": "relative overflow-hidden bg-cvds-accent text-white font-semibold shadow-[0_4px_14px_0_hsl(var(--cvds-accent)/0.39)] hover:shadow-[0_6px_20px_0_hsl(var(--cvds-accent)/0.5)] transition-all duration-300 hover:-translate-y-0.5 before:absolute before:inset-0 before:bg-gradient-to-r before:from-cvds-secondary before:to-cvds-accent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300 before:pointer-events-none",
         "cvds-primary": "bg-white text-cvds-primary border-2 border-cvds-primary font-semibold hover:bg-cvds-primary hover:text-white transition-all duration-300 hover:-translate-y-0.5 shadow-[0_2px_10px_0_hsl(var(--cvds-primary)/0.15)] hover:shadow-[0_4px_16px_0_hsl(var(--cvds-primary)/0.3)]",
         "cvds-secondary": "bg-gradient-to-br from-cvds-primary to-cvds-secondary text-white font-semibold shadow-[0_4px_14px_0_hsl(var(--cvds-primary)/0.3)] hover:shadow-[0_6px_20px_0_hsl(var(--cvds-primary)/0.45)] transition-all duration-300 hover:scale-[1.02]",
       },

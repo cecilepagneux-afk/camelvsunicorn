@@ -17,7 +17,7 @@ const Hero = () => {
       />
       
       {/* Content */}
-      <div className="relative z-20 text-center text-white px-6 max-w-4xl mx-auto">
+      <div className="relative z-30 text-center text-white px-6 max-w-4xl mx-auto">
         {/* Logo */}
         <div className="mb-12">
           <img 
