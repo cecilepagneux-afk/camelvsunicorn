@@ -35,14 +35,24 @@ const Hero = () => {
           Specialising in SaaS, SEO sites, marketplaces & newsletters – with a human and growth-oriented approach.
         </p>
         
-        <Button 
-          variant="cvds-hero" 
-          size="lg"
-          className="text-xl px-12 py-6 cursor-pointer h-auto"
-          onClick={() => window.open('https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition', '_blank')}
-        >
-          Propose Your Business
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <Button 
+            variant="cvds-hero" 
+            size="lg"
+            className="text-lg px-10 py-6 cursor-pointer h-auto rounded-full min-w-[240px]"
+            onClick={() => window.open('https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition', '_blank')}
+          >
+            Propose Your Business
+          </Button>
+          <Button 
+            variant="cvds-primary" 
+            size="lg"
+            className="text-lg px-10 py-6 cursor-pointer h-auto rounded-full min-w-[240px]"
+            onClick={() => window.open('https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition', '_blank')}
+          >
+            Book a Call
+          </Button>
+        </div>
       </div>
       
       {/* Decorative Elements */}

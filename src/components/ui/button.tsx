@@ -15,8 +15,9 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        "cvds-hero": "bg-gradient-to-r from-cvds-secondary to-cvds-accent text-white hover:from-cvds-accent hover:to-cvds-accent-hover transition-all duration-300 hover:scale-110 font-bold border-0 shadow-[var(--shadow-cta)] hover:shadow-[var(--shadow-cta-hover)] animate-pulse hover:animate-none",
-        "cvds-primary": "bg-cvds-accent text-white hover:bg-cvds-accent-hover transition-all duration-300 hover:scale-105 font-bold shadow-[var(--shadow-cta)] hover:shadow-[var(--shadow-cta-hover)]",
+        "cvds-hero": "relative overflow-hidden bg-cvds-accent text-white font-semibold shadow-[0_4px_14px_0_hsl(var(--cvds-accent)/0.39)] hover:shadow-[0_6px_20px_0_hsl(var(--cvds-accent)/0.5)] transition-all duration-300 hover:-translate-y-0.5 before:absolute before:inset-0 before:bg-gradient-to-r before:from-cvds-secondary before:to-cvds-accent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300",
+        "cvds-primary": "bg-white text-cvds-primary border-2 border-cvds-primary font-semibold hover:bg-cvds-primary hover:text-white transition-all duration-300 hover:-translate-y-0.5 shadow-[0_2px_10px_0_hsl(var(--cvds-primary)/0.15)] hover:shadow-[0_4px_16px_0_hsl(var(--cvds-primary)/0.3)]",
+        "cvds-secondary": "bg-gradient-to-br from-cvds-primary to-cvds-secondary text-white font-semibold shadow-[0_4px_14px_0_hsl(var(--cvds-primary)/0.3)] hover:shadow-[0_6px_20px_0_hsl(var(--cvds-primary)/0.45)] transition-all duration-300 hover:scale-[1.02]",
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -39,9 +40,19 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
-    return <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />;
+    return (
+      <Comp className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props}>
+        {variant === "cvds-hero" ? (
+          <>
+            <span className="relative z-10">{children}</span>
+          </>
+        ) : (
+          children
+        )}
+      </Comp>
+    );
   },
 );
 Button.displayName = "Button";
