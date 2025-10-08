@@ -5,6 +5,7 @@ import About from "@/components/About";
 import LinkedInPost from "@/components/LinkedInPost";
 import AcquisitionProcess from "@/components/AcquisitionProcess";
 import OurAcquisitionProcess from "@/components/OurAcquisitionProcess";
+import RecommendationsForm from "@/components/RecommendationsForm";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -19,6 +20,7 @@ const Index = () => {
         <LinkedInPost />
         <AcquisitionProcess />
         <OurAcquisitionProcess />
+        <RecommendationsForm />
         <Contact />
       </div>
       <Footer />
