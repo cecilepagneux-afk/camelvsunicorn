@@ -3,7 +3,6 @@ import WhyPartner from "@/components/WhyPartner";
 import WhatWeLookFor from "@/components/WhatWeLookFor";
 import About from "@/components/About";
 import LinkedInPost from "@/components/LinkedInPost";
-import AcquisitionProcess from "@/components/AcquisitionProcess";
 import OurAcquisitionProcess from "@/components/OurAcquisitionProcess";
 import RecommendationsForm from "@/components/RecommendationsForm";
 import Contact from "@/components/Contact";
@@ -18,7 +17,6 @@ const Index = () => {
         <WhatWeLookFor />
         <About />
         <LinkedInPost />
-        <AcquisitionProcess />
         <OurAcquisitionProcess />
         <RecommendationsForm />
         <Contact />
