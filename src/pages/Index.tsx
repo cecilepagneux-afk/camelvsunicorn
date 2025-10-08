@@ -3,6 +3,7 @@ import WhyPartner from "@/components/WhyPartner";
 import WhatWeLookFor from "@/components/WhatWeLookFor";
 import About from "@/components/About";
 import LinkedInPost from "@/components/LinkedInPost";
+import AcquisitionProcess from "@/components/AcquisitionProcess";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -15,6 +16,7 @@ const Index = () => {
         <WhatWeLookFor />
         <About />
         <LinkedInPost />
+        <AcquisitionProcess />
         <Contact />
       </div>
       <Footer />
