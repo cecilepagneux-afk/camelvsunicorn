@@ -4,6 +4,7 @@ import WhatWeLookFor from "@/components/WhatWeLookFor";
 import About from "@/components/About";
 import LinkedInPost from "@/components/LinkedInPost";
 import AcquisitionProcess from "@/components/AcquisitionProcess";
+import OurAcquisitionProcess from "@/components/OurAcquisitionProcess";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ const Index = () => {
         <About />
         <LinkedInPost />
         <AcquisitionProcess />
+        <OurAcquisitionProcess />
         <Contact />
       </div>
       <Footer />
