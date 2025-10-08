@@ -58,7 +58,7 @@ const RecommendationsForm = () => {
                 We'd love to learn more about your business and what makes it special.
               </p>
               <p>
-                At Camel vs Unicorn, we respect founders' work and handle every conversation with confidentiality and respect.
+                At CVDS Digital Ventures, we respect founders' work and handle every conversation with confidentiality and respect.
               </p>
               <p>
                 Even if we're not the right fit, you'll receive honest feedback and guidance.
