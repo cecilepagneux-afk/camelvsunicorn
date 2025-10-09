@@ -1,47 +1,12 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { CheckCircle } from "lucide-react";
 
-const formSchema = z.object({
-  name: z.string().trim().min(1, { message: "Please enter your name" }).max(100),
-  email: z.string().trim().email({ message: "Please enter a valid email address" }).max(255),
-  businessLink: z.string().trim().url({ message: "Please enter a valid URL" }).max(500),
-  monthlyRevenue: z.string().trim().min(1, { message: "Please provide approximate revenue" }).max(100),
-  profitMargin: z.string().trim().min(1, { message: "Please provide profit margin" }).max(50),
-  mainChallenge: z.string().trim().min(10, { message: "Please tell us more (at least 10 characters)" }).max(1000),
-  additionalInfo: z.string().trim().max(1000).optional(),
-});
-
-type FormData = z.infer<typeof formSchema>;
-
 const RecommendationsForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-    reset,
-  } = useForm<FormData>({
-    resolver: zodResolver(formSchema),
-  });
-
-  const onSubmit = async (data: FormData) => {
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log("Form submitted:", data);
-    setIsSubmitted(true);
-    reset();
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
-  };
 
   return (
     <section className="py-20 px-6 bg-gradient-to-b from-background to-gray-50/30">
@@ -85,19 +50,27 @@ const RecommendationsForm = () => {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+              <form 
+                action="https://formsubmit.co/cécile.pagneux@hotmail.fr" 
+                method="POST"
+                className="space-y-6"
+              >
+                {/* FormSubmit Configuration - Hidden Fields */}
+                <input type="hidden" name="_subject" value="New CVDS Digital Ventures Submission" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://camelvsunicorn.lovable.app/thank-you" />
+
                 {/* Name */}
                 <div className="space-y-2">
                   <Label htmlFor="name">Your Name</Label>
                   <Input
                     id="name"
-                    {...register("name")}
+                    name="name"
                     className="w-full"
                     placeholder="John Smith"
+                    required
                   />
-                  {errors.name && (
-                    <p className="text-sm text-red-500">{errors.name.message}</p>
-                  )}
                 </div>
 
                 {/* Email */}
@@ -105,14 +78,12 @@ const RecommendationsForm = () => {
                   <Label htmlFor="email">Email Address</Label>
                   <Input
                     id="email"
+                    name="email"
                     type="email"
-                    {...register("email")}
                     className="w-full"
                     placeholder="john@example.com"
+                    required
                   />
-                  {errors.email && (
-                    <p className="text-sm text-red-500">{errors.email.message}</p>
-                  )}
                 </div>
 
                 {/* Business Link */}
@@ -120,14 +91,12 @@ const RecommendationsForm = () => {
                   <Label htmlFor="businessLink">Link to Your Business</Label>
                   <Input
                     id="businessLink"
+                    name="businessLink"
                     type="url"
-                    {...register("businessLink")}
                     className="w-full"
                     placeholder="https://yourbusiness.com"
+                    required
                   />
-                  {errors.businessLink && (
-                    <p className="text-sm text-red-500">{errors.businessLink.message}</p>
-                  )}
                 </div>
 
                 {/* Monthly Revenue */}
@@ -135,13 +104,11 @@ const RecommendationsForm = () => {
                   <Label htmlFor="monthlyRevenue">Monthly Revenue (approximate)</Label>
                   <Input
                     id="monthlyRevenue"
-                    {...register("monthlyRevenue")}
+                    name="monthlyRevenue"
                     className="w-full"
                     placeholder="e.g., $5,000 AUD"
+                    required
                   />
-                  {errors.monthlyRevenue && (
-                    <p className="text-sm text-red-500">{errors.monthlyRevenue.message}</p>
-                  )}
                 </div>
 
                 {/* Profit Margin */}
@@ -149,13 +116,11 @@ const RecommendationsForm = () => {
                   <Label htmlFor="profitMargin">Profit Margin (%)</Label>
                   <Input
                     id="profitMargin"
-                    {...register("profitMargin")}
+                    name="profitMargin"
                     className="w-full"
                     placeholder="e.g., 35%"
+                    required
                   />
-                  {errors.profitMargin && (
-                    <p className="text-sm text-red-500">{errors.profitMargin.message}</p>
-                  )}
                 </div>
 
                 {/* Main Challenge */}
@@ -165,13 +130,11 @@ const RecommendationsForm = () => {
                   </Label>
                   <Textarea
                     id="mainChallenge"
-                    {...register("mainChallenge")}
+                    name="mainChallenge"
                     className="w-full min-h-[100px]"
                     placeholder="Tell us what's driving your decision to sell..."
+                    required
                   />
-                  {errors.mainChallenge && (
-                    <p className="text-sm text-red-500">{errors.mainChallenge.message}</p>
-                  )}
                 </div>
 
                 {/* Additional Info */}
@@ -181,13 +144,10 @@ const RecommendationsForm = () => {
                   </Label>
                   <Textarea
                     id="additionalInfo"
-                    {...register("additionalInfo")}
+                    name="additionalInfo"
                     className="w-full min-h-[80px]"
                     placeholder="Any additional context..."
                   />
-                  {errors.additionalInfo && (
-                    <p className="text-sm text-red-500">{errors.additionalInfo.message}</p>
-                  )}
                 </div>
 
                 {/* Submit Button */}
@@ -196,9 +156,8 @@ const RecommendationsForm = () => {
                   variant="cvds-primary"
                   size="lg"
                   className="w-full text-lg"
-                  disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Submitting..." : "Submit Your Business for Review"}
+                  Submit Your Business for Review
                 </Button>
 
                 <p className="text-sm text-gray-500 text-center">
