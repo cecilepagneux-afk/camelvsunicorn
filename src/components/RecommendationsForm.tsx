@@ -9,12 +9,16 @@ const RecommendationsForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background to-gray-50/30">
+    <section className="py-24 px-6 bg-gradient-to-b from-background to-gray-50/30">
       <div className="max-w-7xl mx-auto">
+        <p className="text-center text-lg text-gray-600 mb-4 italic animate-fade-in">
+          This is where every great conversation starts.
+        </p>
+        
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left side - Introduction */}
           <div className="space-y-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-cvds-primary">
+            <h2 className="text-4xl md:text-5xl font-bold text-cvds-primary animate-fade-in-up">
               Ready to Tell Your Story?
             </h2>
             
@@ -35,18 +39,24 @@ const RecommendationsForm = () => {
                 "We're currently reviewing our first acquisitions — your submission helps us shape the future of responsible digital ownership."
               </p>
             </div>
+            
+            <div className="bg-white border border-cvds-accent/30 p-6 rounded-lg shadow-sm">
+              <p className="text-gray-700 leading-relaxed">
+                <strong className="text-cvds-primary">📬 We read every submission carefully</strong> — and reply personally within 3 business days.
+              </p>
+            </div>
           </div>
 
           {/* Right side - Form */}
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
             {isSubmitted ? (
-              <div className="text-center py-12 space-y-4">
-                <CheckCircle className="w-16 h-16 text-green-500 mx-auto" />
-                <h3 className="text-2xl font-bold text-cvds-secondary">
-                  Thanks for sharing!
+              <div className="text-center py-12 space-y-6 animate-fade-in">
+                <CheckCircle className="w-20 h-20 text-green-500 mx-auto" />
+                <h3 className="text-3xl font-bold text-cvds-secondary">
+                  Thank you for sharing your story!
                 </h3>
-                <p className="text-gray-600">
-                  We'll review your business and get back to you soon.
+                <p className="text-lg text-gray-700 leading-relaxed max-w-md mx-auto">
+                  We'll be in touch shortly — every submission is reviewed carefully and gets a personal reply within 3 business days.
                 </p>
               </div>
             ) : (
@@ -153,9 +163,9 @@ const RecommendationsForm = () => {
                 {/* Submit Button */}
                 <Button
                   type="submit"
-                  variant="cvds-primary"
+                  variant="cvds-secondary"
                   size="lg"
-                  className="w-full text-lg"
+                  className="w-full text-lg hover:scale-105 transition-transform shadow-lg"
                 >
                   Submit Your Business for Review
                 </Button>

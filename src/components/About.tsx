@@ -2,15 +2,15 @@ import cecilePhoto from "@/assets/cecile-photo.png";
 
 const About = () => {
   return (
-    <section className="py-20 px-6 bg-background">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-cvds-primary mb-16">
+    <section className="py-24 px-6 bg-background">
+      <div className="max-w-5xl mx-auto">
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-cvds-primary mb-16 animate-fade-in-up">
           About CVDS Digital Ventures
         </h2>
         
-        <div className="flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
+        <div className="flex flex-col md:flex-row items-center gap-12 mb-12">
+          <div className="flex-1 space-y-6">
+            <p className="text-lg text-gray-700 leading-relaxed">
               Founded by <strong className="text-cvds-primary">Cécile Pagneux</strong>, with 20+ years of international experience in IT and sales, CVDS Digital Ventures focuses on respectful acquisitions that preserve each company's DNA while unlocking its growth potential.
             </p>
             
@@ -21,14 +21,21 @@ const About = () => {
           
           <div className="flex-shrink-0">
             <div className="relative">
-              <div className="absolute inset-0 bg-cvds-accent/20 rounded-full blur-2xl scale-110"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-cvds-secondary/30 to-cvds-accent/20 rounded-full blur-3xl scale-110"></div>
               <img 
                 src={cecilePhoto} 
                 alt="Cécile Pagneux, Founder of CVDS Digital Ventures" 
-                className="relative w-64 h-64 object-cover rounded-full shadow-xl border-4 border-white"
+                className="relative w-64 h-64 object-cover rounded-full shadow-2xl border-4 border-white"
               />
             </div>
           </div>
+        </div>
+        
+        <div className="bg-gradient-to-r from-cvds-primary/5 to-cvds-secondary/5 border-l-4 border-cvds-primary p-8 rounded-r-2xl max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 italic leading-relaxed">
+            "Every founder deserves to see their work live on. My goal is to make that transition rewarding — for both sides."
+          </p>
+          <p className="text-cvds-primary font-semibold mt-4">— Cécile Pagneux</p>
         </div>
       </div>
     </section>

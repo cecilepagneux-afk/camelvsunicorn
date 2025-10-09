@@ -27,11 +27,15 @@ const Hero = () => {
           />
         </div>
         
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight animate-fade-in-up">
           We Acquire Profitable Digital Businesses
         </h1>
         
-        <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl mb-6 text-white/80 italic animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          Because behind every dataset, there's still a founder's story.
+        </p>
+        
+        <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
           Specialising in SaaS, SEO sites, marketplaces & newsletters – with a human and growth-oriented approach.
         </p>
         

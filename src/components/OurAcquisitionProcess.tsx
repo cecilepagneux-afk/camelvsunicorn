@@ -8,32 +8,39 @@ const OurAcquisitionProcess = () => {
       number: "01",
       icon: Users,
       title: "Discovery & Fit",
-      description: "We start by understanding the founder's story, business model, and growth journey. Our goal is to see if your business DNA aligns with our long-term philosophy."
+      description: "We start by understanding the founder's story, business model, and growth journey. Our goal is to see if your business DNA aligns with our long-term philosophy.",
+      reassurance: "We know your time is valuable — we keep things simple."
     },
     {
       number: "02",
       icon: FileSearch,
       title: "Due Diligence & Evaluation",
-      description: "We conduct detailed due diligence covering financials and revenue quality, traffic sources and customer retention, technology stack and scalability, and brand resilience. Our analysis ensures transparency and fairness in every step."
+      description: "We conduct detailed due diligence covering financials and revenue quality, traffic sources and customer retention, technology stack and scalability, and brand resilience. Our analysis ensures transparency and fairness in every step.",
+      reassurance: "We know your time is valuable — we keep things simple."
     },
     {
       number: "03",
       icon: Handshake,
       title: "Offer & Transition",
-      description: "We prepare a fair offer based on your numbers and potential, not hype. Once accepted, we guide a smooth transition through clear documentation, handover sessions, and transparent timelines."
+      description: "We prepare a fair offer based on your numbers and potential, not hype. Once accepted, we guide a smooth transition through clear documentation, handover sessions, and transparent timelines.",
+      reassurance: "We know your time is valuable — we keep things simple."
     },
     {
       number: "04",
       icon: Sprout,
       title: "Growth & Continuity",
-      description: "After the acquisition, we focus on preserving your business DNA while introducing scalable improvements. We invest in optimisation, marketing and technology updates to help the business thrive."
+      description: "After the acquisition, we focus on preserving your business DNA while introducing scalable improvements. We invest in optimisation, marketing and technology updates to help the business thrive.",
+      reassurance: "We know your time is valuable — we keep things simple."
     }
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-br from-cvds-primary/5 via-cvds-accent/5 to-background">
+    <section className="py-24 px-6 bg-gradient-to-br from-cvds-primary/5 via-cvds-accent/5 to-background">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center text-cvds-primary mb-6">
+        <p className="text-center text-lg text-gray-600 mb-4 animate-fade-in">
+          Here's how we turn conversations into lasting partnerships.
+        </p>
+        <h2 className="text-4xl md:text-5xl font-bold text-center text-cvds-primary mb-6 animate-fade-in-up">
           Our Acquisition Process
         </h2>
         <p className="text-center text-lg text-gray-700 mb-16 max-w-3xl mx-auto">
@@ -60,12 +67,15 @@ const OurAcquisitionProcess = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="flex-1 pt-2">
-                      <h3 className="text-xl font-semibold text-cvds-secondary mb-3">
+                    <div className="flex-1 pt-2 space-y-3">
+                      <h3 className="text-xl font-semibold text-cvds-secondary">
                         {step.title}
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
                         {step.description}
+                      </p>
+                      <p className="text-sm text-cvds-primary/70 italic pt-2">
+                        {step.reassurance}
                       </p>
                     </div>
                   </div>
@@ -80,9 +90,9 @@ const OurAcquisitionProcess = () => {
             Ready to explore whether your business fits our portfolio? Let's start the conversation.
           </p>
           <Button 
-            variant="cvds-primary" 
+            variant="cvds-secondary" 
             size="lg"
-            className="text-lg px-10 py-6 h-auto rounded-full"
+            className="text-lg px-10 py-6 h-auto rounded-full shadow-lg hover:shadow-xl"
             asChild
           >
             <a 

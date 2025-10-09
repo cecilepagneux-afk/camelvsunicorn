@@ -2,14 +2,14 @@ import { Button } from "@/components/ui/button";
 
 const Contact = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-background to-cvds-primary/5">
+    <section className="py-24 px-6 bg-gradient-to-b from-background to-cvds-primary/5">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-cvds-primary mb-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-cvds-primary mb-8 animate-fade-in-up">
           Let's Talk
         </h2>
         
-        <p className="text-xl text-gray-700 mb-12 max-w-2xl mx-auto">
-          Ready to discuss your digital business? Book a 15-minute intro call today.
+        <p className="text-xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
+          Every founder's journey starts with a conversation — let's start ours.
         </p>
         
         <Button 
