@@ -51,7 +51,7 @@ const RecommendationsForm = () => {
               </div>
             ) : (
               <form 
-                action="https://formsubmit.co/cécile.pagneux@hotmail.fr" 
+                action="https://formsubmit.co/cecile.pagneux@hotmail.fr" 
                 method="POST"
                 className="space-y-6"
               >
