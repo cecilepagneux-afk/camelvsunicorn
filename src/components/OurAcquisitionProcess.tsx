@@ -8,29 +8,25 @@ const OurAcquisitionProcess = () => {
       number: "01",
       icon: Users,
       title: "Discovery & Fit",
-      description: "We start by understanding the founder's story, business model, and growth journey. Our goal is to see if your business DNA aligns with our long-term philosophy.",
-      reassurance: "We know your time is valuable — we keep things simple."
+      description: "We start by understanding the founder's story, business model, and growth journey. Our goal is to see if your business DNA aligns with our long-term philosophy."
     },
     {
       number: "02",
       icon: FileSearch,
       title: "Due Diligence & Evaluation",
-      description: "We conduct detailed due diligence covering financials and revenue quality, traffic sources and customer retention, technology stack and scalability, and brand resilience. Our analysis ensures transparency and fairness in every step.",
-      reassurance: "We know your time is valuable — we keep things simple."
+      description: "We conduct detailed due diligence covering financials and revenue quality, traffic sources and customer retention, technology stack and scalability, and brand resilience. Our analysis ensures transparency and fairness in every step."
     },
     {
       number: "03",
       icon: Handshake,
       title: "Offer & Transition",
-      description: "We prepare a fair offer based on your numbers and potential, not hype. Once accepted, we guide a smooth transition through clear documentation, handover sessions, and transparent timelines.",
-      reassurance: "We know your time is valuable — we keep things simple."
+      description: "We prepare a fair offer based on your numbers and potential, not hype. Once accepted, we guide a smooth transition through clear documentation, handover sessions, and transparent timelines."
     },
     {
       number: "04",
       icon: Sprout,
       title: "Growth & Continuity",
-      description: "After the acquisition, we focus on preserving your business DNA while introducing scalable improvements. We invest in optimisation, marketing and technology updates to help the business thrive.",
-      reassurance: "We know your time is valuable — we keep things simple."
+      description: "After the acquisition, we focus on preserving your business DNA while introducing scalable improvements. We invest in optimisation, marketing and technology updates to help the business thrive."
     }
   ];
 
@@ -73,9 +69,6 @@ const OurAcquisitionProcess = () => {
                       </h3>
                       <p className="text-gray-600 leading-relaxed">
                         {step.description}
-                      </p>
-                      <p className="text-sm text-cvds-primary/70 italic pt-2">
-                        {step.reassurance}
                       </p>
                     </div>
                   </div>
