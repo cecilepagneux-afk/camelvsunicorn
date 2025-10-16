@@ -17,33 +17,33 @@ const Home = () => {
               Building Sustainable Digital Ventures
             </h1>
             <p className="text-2xl md:text-3xl text-cvds-primary mb-8 font-light">
-              One profitable acquisition at a time.
+              One acquisition and one AI tool at a time.
             </p>
             <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
-              At CVDS Digital Ventures, I acquire and scale small AI-driven businesses that automate, simplify, and grow responsibly. Every acquisition is a handover — not just a transaction.
+              At CVDS Digital Ventures, I acquire and build small, automation-driven businesses that simplify, scale, and sustain digital growth responsibly.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
                 variant="cvds-hero" 
                 size="lg"
-                className="text-lg px-10 py-6 h-auto group"
+                className="text-lg px-10 py-6 h-auto group hover:shadow-lg transition-all"
                 asChild
               >
-                <Link to="/philosophy">
-                  Discover the Philosophy
+                <Link to="/thesis">
+                  View Investment Thesis
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
               
               <Button 
-                variant="cvds-secondary" 
+                variant="outline" 
                 size="lg"
-                className="text-lg px-10 py-6 h-auto"
+                className="text-lg px-10 py-6 h-auto border-2 border-cvds-primary text-cvds-primary hover:bg-cvds-primary hover:text-white transition-all"
                 asChild
               >
-                <Link to="/thesis">
-                  View Investment Thesis
+                <Link to="/portfolio">
+                  Explore AI Tools Portfolio
                 </Link>
               </Button>
             </div>
@@ -57,7 +57,7 @@ const Home = () => {
                 What CVDS Does
               </h2>
               
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center animate-fade-in" style={{ animationDelay: '100ms' }}>
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center">
                     <Target className="w-8 h-8 text-white" />
@@ -85,6 +85,16 @@ const Home = () => {
                   <h3 className="text-xl font-semibold text-cvds-dark mb-3">Connect</h3>
                   <p className="text-gray-600 leading-relaxed">
                     Build bridges between Australia and Europe, creating a sustainable digital ecosystem across continents.
+                  </p>
+                </div>
+
+                <div className="text-center animate-fade-in" style={{ animationDelay: '400ms' }}>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-cvds-dark mb-3">Build</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    Create AI-powered tools that automate, simplify, and grow digital ventures responsibly — from inventory to customer experience.
                   </p>
                 </div>
               </div>

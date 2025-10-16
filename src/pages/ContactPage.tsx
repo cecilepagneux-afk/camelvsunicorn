@@ -1,12 +1,57 @@
-import { Mail, Linkedin, MapPin, Calendar } from "lucide-react";
+import { Mail, Linkedin, MapPin, Calendar, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import cvdsLogo from "@/assets/cvds-logo-main.png";
 import cecilePhoto from "@/assets/cecile-photo-professional.png";
 import qrCode from "@/assets/qr-code-cvds.png";
+import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 const ContactPage = () => {
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    productName: "",
+    websiteUrl: "",
+    monthlyRevenue: "",
+    description: ""
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const subject = encodeURIComponent("SaaS or AI Tool Submission");
+    const body = encodeURIComponent(`
+Full Name: ${formData.fullName}
+Email: ${formData.email}
+Product/Tool Name: ${formData.productName}
+Website or Demo Link: ${formData.websiteUrl}
+Monthly Revenue: ${formData.monthlyRevenue || "Not provided"}
+
+Description:
+${formData.description}
+    `);
+    
+    window.location.href = `mailto:cecile.pagneux@hotmail.fr?subject=${subject}&body=${body}`;
+    
+    toast({
+      title: "Opening email client...",
+      description: "Your submission details are ready to send.",
+    });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -165,8 +210,138 @@ const ContactPage = () => {
         </div>
       </section>
 
-      {/* Newsletter / Stay Connected */}
+      {/* SaaS Submission Form */}
       <section className="py-20 px-6 bg-gradient-to-b from-white to-cvds-primary/5">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-white rounded-2xl p-10 shadow-sm border border-gray-100">
+            <h2 className="text-3xl font-bold text-cvds-dark mb-4 text-center">
+              📩 Submit a SaaS / AI Tool for Acquisition
+            </h2>
+            <p className="text-lg text-gray-700 mb-8 text-center leading-relaxed">
+              If you're a founder considering selling your SaaS or AI project, I'd love to hear from you.
+              Fill out the quick form below — I personally review each submission and reply within 48 hours.
+            </p>
+
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <Label htmlFor="fullName" className="text-cvds-dark font-medium">
+                    Full Name *
+                  </Label>
+                  <Input
+                    id="fullName"
+                    name="fullName"
+                    type="text"
+                    required
+                    value={formData.fullName}
+                    onChange={handleChange}
+                    className="mt-2 border-gray-300 focus:border-cvds-primary focus:ring-cvds-primary"
+                    placeholder="Your name"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="email" className="text-cvds-dark font-medium">
+                    Email Address *
+                  </Label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="mt-2 border-gray-300 focus:border-cvds-primary focus:ring-cvds-primary"
+                    placeholder="you@example.com"
+                  />
+                </div>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <Label htmlFor="productName" className="text-cvds-dark font-medium">
+                    Product / Tool Name *
+                  </Label>
+                  <Input
+                    id="productName"
+                    name="productName"
+                    type="text"
+                    required
+                    value={formData.productName}
+                    onChange={handleChange}
+                    className="mt-2 border-gray-300 focus:border-cvds-primary focus:ring-cvds-primary"
+                    placeholder="Your product name"
+                  />
+                </div>
+
+                <div>
+                  <Label htmlFor="websiteUrl" className="text-cvds-dark font-medium">
+                    Website or Demo Link *
+                  </Label>
+                  <Input
+                    id="websiteUrl"
+                    name="websiteUrl"
+                    type="url"
+                    required
+                    value={formData.websiteUrl}
+                    onChange={handleChange}
+                    className="mt-2 border-gray-300 focus:border-cvds-primary focus:ring-cvds-primary"
+                    placeholder="https://..."
+                  />
+                </div>
+              </div>
+
+              <div>
+                <Label htmlFor="monthlyRevenue" className="text-cvds-dark font-medium">
+                  Monthly Revenue (optional)
+                </Label>
+                <Input
+                  id="monthlyRevenue"
+                  name="monthlyRevenue"
+                  type="text"
+                  value={formData.monthlyRevenue}
+                  onChange={handleChange}
+                  className="mt-2 border-gray-300 focus:border-cvds-primary focus:ring-cvds-primary"
+                  placeholder="e.g., $2,000 MRR"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="description" className="text-cvds-dark font-medium">
+                  Short Description *
+                </Label>
+                <Textarea
+                  id="description"
+                  name="description"
+                  required
+                  value={formData.description}
+                  onChange={handleChange}
+                  rows={5}
+                  className="mt-2 border-gray-300 focus:border-cvds-primary focus:ring-cvds-primary"
+                  placeholder="Tell me about your product, its unique value, current users, tech stack, and why you're considering a sale..."
+                />
+              </div>
+
+              <Button
+                type="submit"
+                variant="cvds-hero"
+                size="lg"
+                className="w-full text-lg py-6 h-auto group hover:shadow-lg transition-all"
+              >
+                <Send className="mr-2 w-5 h-5" />
+                Send Your Project
+              </Button>
+
+              <p className="text-sm text-gray-500 text-center italic">
+                All submissions are handled with confidentiality
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter / Stay Connected */}
+      <section className="py-20 px-6 bg-cvds-primary/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-cvds-primary mb-6">
             Join the CVDS Journey

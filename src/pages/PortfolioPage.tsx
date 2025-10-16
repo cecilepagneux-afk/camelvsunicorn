@@ -1,31 +1,27 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, Cpu, ShoppingBag, Eye, Sparkles, ArrowRight } from "lucide-react";
+import { Lightbulb, Cpu, ShoppingBag, Eye, Sparkles, ArrowRight, ExternalLink } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SKUGeniusShowcase from "@/components/SKUGeniusShowcase";
 
 const PortfolioPage = () => {
-  const liveProjects = [
-    {
-      icon: ShoppingBag,
-      name: "SKU Genius",
-      status: "Prototype",
-      description: "AI-powered catalog and inventory manager helping e-commerce merchants streamline SKUs, automate product data enrichment, and maintain consistency across multiple sales channels.",
-      highlights: ["Product data structuring", "Multi-channel sync", "AI enrichment"]
-    },
+  const otherProjects = [
     {
       icon: Cpu,
       name: "AI Chat Support",
       status: "In Development",
-      description: "Conversational AI assistant designed for small e-commerce brands. Handles customer inquiries, order tracking, and basic support — learning from each interaction to improve response quality.",
-      highlights: ["24/7 customer support", "Order management", "Self-learning AI"]
+      description: "Conversational AI assistant designed for small e-commerce brands. Handles customer inquiries, order tracking, and product support while learning from each interaction to improve quality.",
+      highlights: ["24/7 customer support", "Order management", "Self-learning AI"],
+      link: "https://www.linkedin.com/in/cecile-pagneux"
     },
     {
       icon: Eye,
       name: "Virtual Try-On (VTO)",
       status: "Acquisition Target",
-      description: "Augmented reality technology that allows customers to visualize products in their environment or on themselves before purchase — reducing returns and increasing confidence.",
-      highlights: ["AR visualization", "Reduced returns", "Enhanced UX"]
+      description: "Augmented reality technology allowing customers to visualize products in their environment or on themselves before purchase — reducing returns and boosting confidence.",
+      highlights: ["AR visualization", "Reduced returns", "Enhanced UX"],
+      link: "/collaborate"
     }
   ];
 
@@ -53,22 +49,24 @@ const PortfolioPage = () => {
             Every experiment teaches me something new.
           </p>
           <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-6">
-            Portfolio & Live Experiments
+            AI Tools Portfolio & Live Experiments
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            From SKU Genius to AI chat prototypes, each project is a step towards a more sustainable digital ecosystem. 
-            Some are acquired. Some are built from scratch. All are designed to solve real problems.
+            Each project is a step toward a smarter, more human digital ecosystem. Some are acquisitions, others are experiments — all designed to solve real-world e-commerce challenges.
           </p>
         </div>
       </section>
 
-      {/* Live Projects */}
+      {/* SKU Genius Showcase */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Live Projects</h2>
           
-          <div className="space-y-8">
-            {liveProjects.map((project, index) => {
+          <SKUGeniusShowcase />
+          
+          {/* Other Projects */}
+          <div className="space-y-8 mt-8">
+            {otherProjects.map((project, index) => {
               const Icon = project.icon;
               return (
                 <div 
@@ -97,7 +95,7 @@ const PortfolioPage = () => {
                         {project.description}
                       </p>
                       
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-2 mb-6">
                         {project.highlights.map((highlight, i) => (
                           <span 
                             key={i}
@@ -107,6 +105,25 @@ const PortfolioPage = () => {
                           </span>
                         ))}
                       </div>
+                      
+                      <Button
+                        variant="cvds-secondary"
+                        size="lg"
+                        className="hover:shadow-lg transition-all group"
+                        asChild
+                      >
+                        {project.link.startsWith('http') ? (
+                          <a href={project.link} target="_blank" rel="noopener noreferrer">
+                            {project.name === "AI Chat Support" ? "Follow Progress on LinkedIn" : "Join Collaboration"}
+                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                          </a>
+                        ) : (
+                          <Link to={project.link}>
+                            {project.name === "AI Chat Support" ? "Follow Progress on LinkedIn" : "Join Collaboration"}
+                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                          </Link>
+                        )}
+                      </Button>
                     </div>
                   </div>
                 </div>

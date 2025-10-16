@@ -26,11 +26,11 @@ const Collaborate = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-cvds-primary/5 to-cvds-secondary/10 rounded-2xl p-10 mb-16 border border-cvds-primary/20">
             <p className="text-xl text-gray-800 leading-relaxed mb-4">
-              I collaborate with founders ready to transition, brokers sourcing small SaaS, and builders creating automation tools.
+              I collaborate with founders ready to transition, brokers sourcing small SaaS or AI tools, and builders creating automation modules.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
               Every deal is structured around <strong>alignment and continuity</strong> — not disruption. 
-              Your work matters. Your customers matter. Let's find the right path forward together.
+              Let's find the right path forward together.
             </p>
           </div>
 
@@ -62,9 +62,9 @@ const Collaborate = () => {
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center mb-5">
                 <Handshake className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-cvds-dark mb-3">Builders & Partners</h3>
+              <h3 className="text-xl font-semibold text-cvds-dark mb-3">Builders & AI Creators</h3>
               <p className="text-gray-600 leading-relaxed">
-                Creating automation tools, AI prototypes, or complementary technologies that align with CVDS's ecosystem vision.
+                For developers or founders designing micro-tools that could complement the CVDS ecosystem — creating automation tools, AI prototypes, or complementary technologies.
               </p>
             </div>
           </div>
@@ -165,7 +165,7 @@ const Collaborate = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-cvds-primary via-cvds-primary to-cvds-secondary rounded-2xl p-12 text-center text-white shadow-lg">
             <h2 className="text-4xl font-bold mb-6">
-              Let's Discuss a Potential Acquisition
+              Let's Discuss a Potential Acquisition or Collaboration on AI Tools
             </h2>
             <p className="text-xl mb-10 opacity-95">
               Not a pitch. Just a conversation. Let's explore what's possible together.

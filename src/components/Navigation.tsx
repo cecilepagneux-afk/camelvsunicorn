@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Linkedin } from "lucide-react";
 import { useState } from "react";
 import cvdsLogo from "@/assets/cvds-logo-main.png";
 
@@ -42,6 +42,16 @@ const Navigation = () => {
                 {link.label}
               </Link>
             ))}
+            
+            <a
+              href="https://www.linkedin.com/in/cecile-pagneux/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-2 p-2 rounded-full text-cvds-primary hover:bg-cvds-primary/10 transition-all duration-300 group"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

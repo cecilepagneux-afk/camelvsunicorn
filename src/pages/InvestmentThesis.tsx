@@ -181,7 +181,11 @@ const InvestmentThesis = () => {
       {/* Roadmap */}
       <section className="py-20 px-6 bg-cvds-primary/5">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Roadmap 2025-2028</h2>
+          <p className="text-center text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+            This roadmap connects strategic acquisitions with the development of automation-driven tools for e-commerce and AI-powered software.
+          </p>
+          
+          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Growth Roadmap 2025–2028</h2>
           
           <div className="relative">
             {/* Timeline Line */}
@@ -193,6 +197,9 @@ const InvestmentThesis = () => {
                 <div className="md:flex md:items-center">
                   <div className="md:w-1/2 md:pr-12 md:text-right">
                     <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in">
+                      <span className="inline-block px-4 py-1 bg-green-500/20 text-green-700 rounded-full text-sm font-medium mb-3">
+                        🟢 In Progress
+                      </span>
                       <h3 className="text-2xl font-bold text-cvds-dark mb-3">2025</h3>
                       <h4 className="text-xl font-semibold text-cvds-primary mb-3">First Acquisition</h4>
                       <p className="text-gray-600 leading-relaxed">
@@ -273,11 +280,11 @@ const InvestmentThesis = () => {
           <Button 
             variant="cvds-hero" 
             size="lg"
-            className="text-lg px-10 py-6 h-auto group"
+            className="text-lg px-10 py-6 h-auto group hover:shadow-lg transition-all"
             asChild
           >
             <Link to="/portfolio">
-              Explore Live Projects
+              Explore Live AI Projects
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
