@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Handshake, Users, Briefcase, Calendar, Mail } from "lucide-react";
+import { Handshake, Users, Briefcase, Calendar, Mail, Zap, TrendingUp } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -12,11 +12,14 @@ const Collaborate = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-white via-cvds-primary/5 to-cvds-secondary/10">
         <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
+          <p className="text-lg text-cvds-secondary mb-4 font-medium">
+            Open collaboration opportunities for founders, brokers, and AI builders
+          </p>
           <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-6">
             Work With Me
           </h1>
-          <p className="text-2xl text-cvds-primary font-light max-w-3xl mx-auto">
-            Open collaboration opportunities for founders, brokers, and builders
+          <p className="text-2xl text-gray-700 font-light max-w-3xl mx-auto">
+            Let's find the right path forward together
           </p>
         </div>
       </section>
@@ -24,7 +27,7 @@ const Collaborate = () => {
       {/* Main Intro */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-cvds-primary/5 to-cvds-secondary/10 rounded-2xl p-10 mb-16 border border-cvds-primary/20">
+          <div className="bg-gradient-to-br from-cvds-primary/5 to-cvds-secondary/10 rounded-2xl p-10 mb-12 border border-cvds-primary/20">
             <p className="text-xl text-gray-800 leading-relaxed mb-4">
               I collaborate with founders ready to transition, brokers sourcing small SaaS or AI tools, and builders creating automation modules.
             </p>
@@ -33,9 +36,39 @@ const Collaborate = () => {
               Let's find the right path forward together.
             </p>
           </div>
+          
+          {/* Banner CTA */}
+          <div className="bg-gradient-to-r from-cvds-primary to-cvds-secondary p-8 rounded-2xl shadow-xl mb-16 max-w-2xl mx-auto">
+            <p className="text-white text-lg font-medium mb-4">
+              Ready to start a conversation?
+            </p>
+            <a 
+              href="mailto:cecile.pagneux@hotmail.fr?subject=Introduction%20Call%20Request"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-cvds-primary rounded-full hover:scale-105 transition-all duration-300 font-bold shadow-lg"
+            >
+              <Calendar className="w-5 h-5" />
+              Book a 20-minute introduction call with Cécile
+            </a>
+          </div>
 
           {/* Who I Work With */}
           <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Who I Work With</h2>
+          
+          {/* Badges */}
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
+            <div className="flex items-center gap-2 px-6 py-3 bg-green-50 border-2 border-green-200 rounded-full">
+              <Handshake className="w-5 h-5 text-green-600" />
+              <span className="font-semibold text-green-800">Founder-Friendly</span>
+            </div>
+            <div className="flex items-center gap-2 px-6 py-3 bg-blue-50 border-2 border-blue-200 rounded-full">
+              <Zap className="w-5 h-5 text-blue-600" />
+              <span className="font-semibold text-blue-800">Automation-Driven</span>
+            </div>
+            <div className="flex items-center gap-2 px-6 py-3 bg-purple-50 border-2 border-purple-200 rounded-full">
+              <TrendingUp className="w-5 h-5 text-purple-600" />
+              <span className="font-semibold text-purple-800">Cash-Flow Positive</span>
+            </div>
+          </div>
           
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all hover:scale-105 duration-300">

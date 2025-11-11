@@ -215,6 +215,24 @@ const PortfolioPage = () => {
             </Link>
           </Button>
         </div>
+        
+        {/* Collaboration CTA */}
+        <div className="text-center mt-16">
+          <p className="text-lg text-gray-600 mb-6 italic">
+            Each one is a step towards a more sustainable digital ecosystem.
+          </p>
+          <Button 
+            variant="cvds-hero" 
+            size="lg"
+            className="text-lg px-10 py-6 h-auto group hover:shadow-lg transition-all"
+            asChild
+          >
+            <Link to="/collaborate">
+              Join Collaboration
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </Button>
+        </div>
       </section>
 
       <Footer />

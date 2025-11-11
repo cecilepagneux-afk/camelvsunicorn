@@ -19,8 +19,12 @@ const Home = () => {
             <p className="text-2xl md:text-3xl text-cvds-primary mb-8 font-light">
               One acquisition and one AI tool at a time.
             </p>
-            <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
               At CVDS Digital Ventures, I acquire and build small, automation-driven businesses that simplify, scale, and sustain digital growth responsibly.
+            </p>
+            
+            <p className="text-lg text-cvds-dark mb-12 max-w-3xl mx-auto font-medium italic">
+              We acquire, build, and scale automation-driven digital assets responsibly — where founders' work lives on.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -30,8 +34,8 @@ const Home = () => {
                 className="text-lg px-10 py-6 h-auto group hover:shadow-lg transition-all"
                 asChild
               >
-                <Link to="/thesis">
-                  View Investment Thesis
+                <Link to="/contact">
+                  For Founders – Sell your SaaS / AI Tool
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
@@ -42,8 +46,32 @@ const Home = () => {
                 className="text-lg px-10 py-6 h-auto border-2 border-cvds-primary text-cvds-primary hover:bg-cvds-primary hover:text-white transition-all"
                 asChild
               >
+                <Link to="/collaborate">
+                  For Partners – Collaborate with CVDS
+                </Link>
+              </Button>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="text-lg px-10 py-6 h-auto border-2 border-cvds-secondary text-cvds-secondary hover:bg-cvds-secondary hover:text-white transition-all"
+                asChild
+              >
+                <Link to="/thesis">
+                  View Investment Thesis
+                </Link>
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="text-lg px-10 py-6 h-auto border-2 border-cvds-accent text-cvds-accent hover:bg-cvds-accent hover:text-white transition-all"
+                asChild
+              >
                 <Link to="/portfolio">
-                  Explore AI Tools Portfolio
+                  Discover Live Projects
                 </Link>
               </Button>
             </div>

@@ -37,7 +37,11 @@ const InvestmentThesis = () => {
           </div>
 
           {/* What I Acquire */}
-          <h3 className="text-3xl font-bold text-cvds-dark mb-10 text-center">What I Acquire</h3>
+          <h3 className="text-3xl font-bold text-cvds-dark mb-8 text-center">What I Acquire</h3>
+          
+          <p className="text-center text-lg text-gray-600 mb-10">
+            Interested in selling your SaaS or AI tool? <Link to="/contact" className="text-cvds-primary font-semibold hover:underline">Submit your project here</Link>
+          </p>
           
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all hover:scale-105 duration-300">
@@ -181,7 +185,7 @@ const InvestmentThesis = () => {
       {/* Roadmap */}
       <section className="py-20 px-6 bg-cvds-primary/5">
         <div className="max-w-5xl mx-auto">
-          <p className="text-center text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-center text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
             This roadmap connects strategic acquisitions with the development of automation-driven tools for e-commerce and AI-powered software.
           </p>
           

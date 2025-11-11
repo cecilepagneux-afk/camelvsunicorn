@@ -35,9 +35,22 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-white/20 pt-8 mt-8">
-          <p className="text-white/70 text-sm">
-            © 2025 CVDS Digital Ventures · All rights reserved
+          <p className="text-white text-lg font-medium mb-4 italic">
+            Micro-acquisitions. Human growth. Global reach.
           </p>
+          
+          <p className="text-white/70 text-sm mb-2">
+            © 2025 CVDS Digital Ventures · Perth (WA) – Spain (2028 Plan)
+          </p>
+          
+          <a 
+            href="/investment-memo.pdf" 
+            className="text-white/80 hover:text-white text-sm underline transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Download Investment Memo (PDF)
+          </a>
         </div>
       </div>
     </footer>

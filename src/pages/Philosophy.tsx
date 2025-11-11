@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Heart, Sprout, Shield, Users } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import WhyPartner from "@/components/WhyPartner";
+import FounderBio from "@/components/FounderBio";
 
 const Philosophy = () => {
   return (
@@ -20,6 +22,9 @@ const Philosophy = () => {
           </p>
         </div>
       </section>
+      
+      {/* Visual Comparison */}
+      <WhyPartner />
 
       {/* Main Philosophy Content */}
       <section className="py-16 px-6 bg-white">
@@ -141,6 +146,9 @@ const Philosophy = () => {
           </div>
         </div>
       </section>
+      
+      {/* Founder Bio */}
+      <FounderBio />
 
       {/* CTA */}
       <section className="py-20 px-6 bg-cvds-primary/5">

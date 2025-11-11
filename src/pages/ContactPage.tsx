@@ -217,9 +217,12 @@ ${formData.description}
             <h2 className="text-3xl font-bold text-cvds-dark mb-4 text-center">
               📩 Submit a SaaS / AI Tool for Acquisition
             </h2>
-            <p className="text-lg text-gray-700 mb-8 text-center leading-relaxed">
+            <p className="text-lg text-gray-700 mb-4 text-center leading-relaxed">
               If you're a founder considering selling your SaaS or AI project, I'd love to hear from you.
               Fill out the quick form below — I personally review each submission and reply within 48 hours.
+            </p>
+            <p className="text-sm text-gray-600 mb-8 text-center italic">
+              ⏱️ Average response time: under 48 hours. Confidentiality guaranteed.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -369,6 +372,18 @@ ${formData.description}
           <p className="text-gray-500 mt-6 italic">
             Join the #CamelVsUnicorn community
           </p>
+          
+          <div className="mt-6">
+            <a 
+              href="https://www.linkedin.com/company/cvds-digital-ventures"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-cvds-primary hover:text-cvds-secondary transition-colors text-sm font-medium"
+            >
+              <Linkedin className="w-4 h-4" />
+              Visit CVDS Digital Ventures on LinkedIn
+            </a>
+          </div>
         </div>
       </section>
 
