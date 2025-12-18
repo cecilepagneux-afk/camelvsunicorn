@@ -28,29 +28,16 @@ const Footer = () => {
               <span className="text-white font-medium">LinkedIn</span>
             </a>
           </div>
-          
-          <p className="text-white/80 text-sm italic">
-            Follow our journey on LinkedIn — join the #CamelVsUnicorn community.
-          </p>
         </div>
         
         <div className="border-t border-white/20 pt-8 mt-8">
           <p className="text-white text-lg font-medium mb-4 italic">
-            Micro-acquisitions. Human growth. Global reach.
+            Digital B2B acquisitions. Structured transitions. Long-term value.
           </p>
           
           <p className="text-white/70 text-sm mb-2">
-            © 2025 CVDS Digital Ventures · Perth (WA) – Spain (2028 Plan)
+            © 2025 CVDS Digital Ventures · Perth (WA)
           </p>
-          
-          <a 
-            href="/investment-memo.pdf" 
-            className="text-white/80 hover:text-white text-sm underline transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Download Investment Memo (PDF)
-          </a>
         </div>
       </div>
     </footer>

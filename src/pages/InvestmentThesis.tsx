@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Cpu, ShoppingBag, Zap, TrendingUp, Globe, Users, Target } from "lucide-react";
+import { ArrowRight, Building2, Users, TrendingUp, Globe, Target, XCircle, CheckCircle } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -13,10 +13,10 @@ const InvestmentThesis = () => {
       <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-white via-cvds-primary/5 to-cvds-secondary/10">
         <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
           <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-6">
-            Investment Thesis
+            Our Acquisition Approach
           </h1>
           <p className="text-2xl text-cvds-primary font-light max-w-3xl mx-auto">
-            How CVDS Digital Ventures acquires and scales automation-driven digital assets
+            A measured, intentional approach to acquiring and operating digital B2B companies
           </p>
         </div>
       </section>
@@ -28,59 +28,123 @@ const InvestmentThesis = () => {
           
           <div className="bg-gradient-to-br from-cvds-primary/5 to-cvds-secondary/10 rounded-2xl p-10 mb-16 border border-cvds-primary/20">
             <p className="text-xl text-gray-800 leading-relaxed mb-6">
-              CVDS Digital Ventures acquires and scales <strong>automation-driven digital assets</strong> with proven profitability and growth potential.
+              CVDS Digital Ventures acquires and operates <strong>digital B2B companies</strong> with established operations and growth potential.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              The focus: small, profitable SaaS and AI tools that make e-commerce smarter, faster, and more sustainable. 
-              Every acquisition is structured around continuity, founder collaboration, and long-term value creation.
+              We focus on services firms, tech-enabled businesses, and structured digital operations. Every acquisition is structured around continuity, operational improvement, and long-term value creation — not quick exits or aggressive restructuring.
             </p>
           </div>
 
-          {/* What I Acquire */}
-          <h3 className="text-3xl font-bold text-cvds-dark mb-8 text-center">What I Acquire</h3>
-          
-          <p className="text-center text-lg text-gray-600 mb-10">
-            Interested in selling your SaaS or AI tool? <Link to="/contact" className="text-cvds-primary font-semibold hover:underline">Submit your project here</Link>
-          </p>
+          {/* What We Acquire */}
+          <h3 className="text-3xl font-bold text-cvds-dark mb-8 text-center">What We Acquire</h3>
           
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all hover:scale-105 duration-300">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center mb-5">
-                <Zap className="w-7 h-7 text-white" />
+                <Building2 className="w-7 h-7 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-cvds-dark mb-3">SaaS Platforms</h4>
+              <h4 className="text-xl font-semibold text-cvds-dark mb-3">Digital Services Firms</h4>
               <p className="text-gray-600 leading-relaxed">
-                Subscription-based software with recurring revenue, proven product-market fit, and clear automation opportunities.
+                Consultancies, agencies, and professional services businesses with established client relationships and recurring revenue potential.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all hover:scale-105 duration-300">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center mb-5">
-                <Cpu className="w-7 h-7 text-white" />
+                <Target className="w-7 h-7 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-cvds-dark mb-3">AI Tools</h4>
+              <h4 className="text-xl font-semibold text-cvds-dark mb-3">Tech-Enabled Businesses</h4>
               <p className="text-gray-600 leading-relaxed">
-                Machine learning and AI-powered solutions that simplify complex workflows and enhance decision-making.
+                Companies where technology serves as an enabler of core operations, not the primary product offering.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all hover:scale-105 duration-300">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center mb-5">
-                <ShoppingBag className="w-7 h-7 text-white" />
+                <Users className="w-7 h-7 text-white" />
               </div>
-              <h4 className="text-xl font-semibold text-cvds-dark mb-3">E-commerce Automation</h4>
+              <h4 className="text-xl font-semibold text-cvds-dark mb-3">Structured Digital Operations</h4>
               <p className="text-gray-600 leading-relaxed">
-                Tools that streamline inventory, customer service, marketing, and operations for online retailers.
+                Businesses with clear processes, documented operations, and potential for further systematisation.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Acquisition Approach */}
+      {/* What We Look For / Avoid */}
       <section className="py-20 px-6 bg-gradient-to-b from-white to-cvds-primary/5">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Acquisition Approach</h2>
+          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Our Criteria</h2>
+          
+          <div className="grid md:grid-cols-2 gap-12">
+            {/* What We Look For */}
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+              <div className="flex items-center gap-3 mb-6">
+                <CheckCircle className="w-8 h-8 text-green-600" />
+                <h3 className="text-2xl font-bold text-cvds-dark">What We Look For</h3>
+              </div>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="text-green-600 mt-1">•</span>
+                  <span><strong>Structure potential</strong> — businesses that can be systematised and scaled</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-600 mt-1">•</span>
+                  <span><strong>Established client base</strong> — existing relationships and revenue</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-600 mt-1">•</span>
+                  <span><strong>Domain expertise</strong> — clear specialisation and market position</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-600 mt-1">•</span>
+                  <span><strong>Transition readiness</strong> — founders open to collaboration during handover</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-green-600 mt-1">•</span>
+                  <span><strong>Cash flow positive</strong> — sustainable operations with proven revenue</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* What We Avoid */}
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+              <div className="flex items-center gap-3 mb-6">
+                <XCircle className="w-8 h-8 text-red-500" />
+                <h3 className="text-2xl font-bold text-cvds-dark">What We Avoid</h3>
+              </div>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="text-red-500 mt-1">•</span>
+                  <span><strong>Pure hourly agencies</strong> — no structure, entirely time-based billing</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-500 mt-1">•</span>
+                  <span><strong>Founder-dependent chaos</strong> — businesses that cannot function without the owner</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-500 mt-1">•</span>
+                  <span><strong>Short-term flip opportunities</strong> — we are not looking for quick exits</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-500 mt-1">•</span>
+                  <span><strong>Venture-backed startups</strong> — misaligned expectations and timelines</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-red-500 mt-1">•</span>
+                  <span><strong>Distressed situations</strong> — turnarounds are not our focus</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Acquisition Approach */}
+      <section className="py-20 px-6 bg-cvds-primary/5">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">How We Work</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
@@ -89,16 +153,16 @@ const InvestmentThesis = () => {
               </div>
               <h3 className="text-xl font-semibold text-cvds-dark mb-3">Founder-Friendly Structures</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                I prioritize vendor finance, earn-outs, and joint ventures that align incentives and share success.
+                Deal structures designed around alignment and shared success, not aggressive negotiation.
               </p>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
-                  <span>Flexible payment terms tailored to cash flow</span>
+                  <span>Flexible payment terms</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
-                  <span>Performance-based earn-outs</span>
+                  <span>Performance-based components</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
@@ -113,20 +177,20 @@ const InvestmentThesis = () => {
               </div>
               <h3 className="text-xl font-semibold text-cvds-dark mb-3">Continuity & Collaboration</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Transitions typically span 3-12 months, with founders involved in knowledge transfer and strategic guidance.
+                Transitions typically span 3-12 months, with founders involved in knowledge transfer.
               </p>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
-                  <span>Brand identity preservation</span>
+                  <span>Brand and reputation preservation</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
-                  <span>Customer relationship protection</span>
+                  <span>Client relationship protection</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
-                  <span>Thoughtful team integration</span>
+                  <span>Team and culture respect</span>
                 </li>
               </ul>
             </div>
@@ -135,22 +199,22 @@ const InvestmentThesis = () => {
               <div className="w-12 h-12 rounded-full bg-cvds-primary/10 flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-cvds-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-cvds-dark mb-3">Value Creation Focus</h3>
+              <h3 className="text-xl font-semibold text-cvds-dark mb-3">Operational Focus</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Post-acquisition, I focus on sustainable growth through automation, process optimization, and market expansion.
+                Post-acquisition, we focus on sustainable improvement through structure and process.
               </p>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
-                  <span>AI-driven automation implementation</span>
+                  <span>Process documentation and systematisation</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
-                  <span>Cross-business synergies</span>
+                  <span>Technology enablement (not replacement)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
-                  <span>International scaling (AU ↔ EU)</span>
+                  <span>Measured expansion</span>
                 </li>
               </ul>
             </div>
@@ -159,18 +223,18 @@ const InvestmentThesis = () => {
               <div className="w-12 h-12 rounded-full bg-cvds-primary/10 flex items-center justify-center mb-4">
                 <Globe className="w-6 h-6 text-cvds-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-cvds-dark mb-3">Global Scalability</h3>
+              <h3 className="text-xl font-semibold text-cvds-dark mb-3">International Perspective</h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                Building bridges between Australia and Europe, creating sustainable digital ecosystems across continents.
+                Building bridges between Australia and Europe for cross-continental opportunity.
               </p>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
-                  <span>Dual-market presence (Perth + Spain)</span>
+                  <span>Dual-market presence (Perth + Europe)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
-                  <span>Multi-timezone operations</span>
+                  <span>Multi-timezone operations experience</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-cvds-primary mr-2">•</span>
@@ -182,113 +246,71 @@ const InvestmentThesis = () => {
         </div>
       </section>
 
-      {/* Roadmap */}
-      <section className="py-20 px-6 bg-cvds-primary/5">
+      {/* Deal Parameters */}
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
-          <p className="text-center text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-            This roadmap connects strategic acquisitions with the development of automation-driven tools for e-commerce and AI-powered software.
-          </p>
+          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Deal Parameters</h2>
           
-          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Growth Roadmap 2025–2028</h2>
-          
-          <div className="relative">
-            {/* Timeline Line */}
-            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-cvds-primary/20"></div>
-            
-            <div className="space-y-12">
-              {/* 2025 */}
-              <div className="relative">
-                <div className="md:flex md:items-center">
-                  <div className="md:w-1/2 md:pr-12 md:text-right">
-                    <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in">
-                      <span className="inline-block px-4 py-1 bg-green-500/20 text-green-700 rounded-full text-sm font-medium mb-3">
-                        🟢 In Progress
-                      </span>
-                      <h3 className="text-2xl font-bold text-cvds-dark mb-3">2025</h3>
-                      <h4 className="text-xl font-semibold text-cvds-primary mb-3">First Acquisition</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        Complete first acquisition under AUD 100K. Focus on SaaS or AI tool with proven revenue and automation potential.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-cvds-primary border-4 border-white shadow-lg"></div>
-                  <div className="md:w-1/2"></div>
-                </div>
-              </div>
-
-              {/* 2026 */}
-              <div className="relative">
-                <div className="md:flex md:items-center">
-                  <div className="md:w-1/2"></div>
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-cvds-secondary border-4 border-white shadow-lg"></div>
-                  <div className="md:w-1/2 md:pl-12">
-                    <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ animationDelay: '200ms' }}>
-                      <h3 className="text-2xl font-bold text-cvds-dark mb-3">2026</h3>
-                      <h4 className="text-xl font-semibold text-cvds-primary mb-3">Portfolio Integration</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        Integrate 3 complementary modules: SKU Genius (catalog management), AI Chat Support, and Virtual Try-On (VTO) technology.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* 2027 */}
-              <div className="relative">
-                <div className="md:flex md:items-center">
-                  <div className="md:w-1/2 md:pr-12 md:text-right">
-                    <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ animationDelay: '400ms' }}>
-                      <h3 className="text-2xl font-bold text-cvds-dark mb-3">2027</h3>
-                      <h4 className="text-xl font-semibold text-cvds-primary mb-3">Cross-Business Synergies</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        Create unified ecosystem connecting acquired tools. Implement shared infrastructure and cross-platform automation.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-cvds-primary border-4 border-white shadow-lg"></div>
-                  <div className="md:w-1/2"></div>
-                </div>
-              </div>
-
-              {/* 2028 */}
-              <div className="relative">
-                <div className="md:flex md:items-center">
-                  <div className="md:w-1/2"></div>
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-8 h-8 rounded-full bg-cvds-secondary border-4 border-white shadow-lg"></div>
-                  <div className="md:w-1/2 md:pl-12">
-                    <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 animate-fade-in" style={{ animationDelay: '600ms' }}>
-                      <h3 className="text-2xl font-bold text-cvds-dark mb-3">2028</h3>
-                      <h4 className="text-xl font-semibold text-cvds-primary mb-3">European Expansion</h4>
-                      <p className="text-gray-600 leading-relaxed">
-                        Establish Spanish headquarters. Complete Australia-Europe bridge with dual operations and multi-continental presence.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <table className="w-full">
+              <thead className="bg-cvds-primary/5">
+                <tr>
+                  <th className="px-8 py-4 text-left text-lg font-semibold text-cvds-dark">Dimension</th>
+                  <th className="px-8 py-4 text-left text-lg font-semibold text-cvds-dark">Focus</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-gray-100">
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-8 py-5 font-medium text-gray-700">Sector</td>
+                  <td className="px-8 py-5 text-gray-600">Digital B2B services, tech-enabled businesses, structured digital operations</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-8 py-5 font-medium text-gray-700">Geography</td>
+                  <td className="px-8 py-5 text-gray-600">Australia, Europe (with international scalability potential)</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-8 py-5 font-medium text-gray-700">Size</td>
+                  <td className="px-8 py-5 text-gray-600">Below AUD 100K initial (flexible based on structure)</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-8 py-5 font-medium text-gray-700">Revenue</td>
+                  <td className="px-8 py-5 text-gray-600">Cash-flow positive with established client base</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-8 py-5 font-medium text-gray-700">Structure</td>
+                  <td className="px-8 py-5 text-gray-600">Flexible — vendor finance, earn-outs, equity partnerships</td>
+                </tr>
+                <tr className="hover:bg-gray-50 transition-colors">
+                  <td className="px-8 py-5 font-medium text-gray-700">Transition</td>
+                  <td className="px-8 py-5 text-gray-600">3-12 months with founder involvement</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-cvds-dark via-cvds-primary to-cvds-secondary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-cvds-dark mb-6">
-            See the Strategy in Action
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Considering a Transition?
           </h2>
-          <p className="text-xl text-gray-700 mb-10">
-            Explore live projects and ongoing experiments that bring this thesis to life.
+          <p className="text-xl text-white/90 mb-4 leading-relaxed">
+            No obligation. Complete confidentiality. A respectful conversation.
+          </p>
+          <p className="text-lg text-white/80 mb-10 leading-relaxed">
+            If you're thinking about passing on your digital business, I'd welcome the opportunity to discuss what a structured transition might look like.
           </p>
           
           <Button 
             variant="cvds-hero" 
             size="lg"
-            className="text-lg px-10 py-6 h-auto group hover:shadow-lg transition-all"
+            className="text-lg px-10 py-6 h-auto group bg-white text-cvds-primary hover:bg-white/90"
             asChild
           >
-            <Link to="/portfolio">
-              Explore Live AI Projects
+            <Link to="/contact">
+              Let's Have a Conversation
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
