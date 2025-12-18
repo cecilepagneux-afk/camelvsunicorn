@@ -1,40 +1,28 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, Cpu, ShoppingBag, Eye, Sparkles, ArrowRight, ExternalLink } from "lucide-react";
+import { Building2, Users, Target, Globe, ArrowRight } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import SKUGeniusShowcase from "@/components/SKUGeniusShowcase";
 
 const PortfolioPage = () => {
-  const otherProjects = [
+  const focusAreas = [
     {
-      icon: Cpu,
-      name: "AI Chat Support",
-      status: "In Development",
-      description: "Conversational AI assistant designed for small e-commerce brands. Handles customer inquiries, order tracking, and product support while learning from each interaction to improve quality.",
-      highlights: ["24/7 customer support", "Order management", "Self-learning AI"],
-      link: "https://www.linkedin.com/in/cecile-pagneux"
+      icon: Building2,
+      name: "Digital Services Firms",
+      description: "Consultancies, agencies, and professional services businesses with established client relationships and potential for recurring revenue.",
+      characteristics: ["Established client base", "Domain expertise", "Revenue stability"]
     },
     {
-      icon: Eye,
-      name: "Virtual Try-On (VTO)",
-      status: "Acquisition Target",
-      description: "Augmented reality technology allowing customers to visualize products in their environment or on themselves before purchase — reducing returns and boosting confidence.",
-      highlights: ["AR visualization", "Reduced returns", "Enhanced UX"],
-      link: "/collaborate"
-    }
-  ];
-
-  const concepts = [
-    {
-      icon: Sparkles,
-      name: "Automation Experiments",
-      description: "Testing workflow automation tools that help e-commerce teams reduce manual tasks and focus on growth."
+      icon: Target,
+      name: "Tech-Enabled Businesses",
+      description: "Companies where technology serves as an enabler of core operations — not the primary product. Strong processes with automation potential.",
+      characteristics: ["Process-driven", "Scalable operations", "Technology leverage"]
     },
     {
-      icon: Lightbulb,
-      name: "Market Intelligence",
-      description: "Exploring AI-driven market analysis tools for competitive insights and pricing optimization."
+      icon: Users,
+      name: "Structured Digital Operations",
+      description: "Businesses with clear processes, documented operations, and potential for further systematisation and growth.",
+      characteristics: ["Documented processes", "Repeatable delivery", "Growth potential"]
     }
   ];
 
@@ -45,29 +33,23 @@ const PortfolioPage = () => {
       {/* Hero */}
       <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-white via-cvds-primary/5 to-cvds-secondary/10">
         <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
-          <p className="text-lg text-gray-600 mb-4 italic">
-            Every experiment teaches me something new.
-          </p>
           <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-6">
-            AI Tools Portfolio & Live Experiments
+            Our Focus Areas
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Each project is a step toward a smarter, more human digital ecosystem. Some are acquisitions, others are experiments — all designed to solve real-world e-commerce challenges.
+            CVDS acquires and operates digital B2B companies with established operations and growth potential. We focus on businesses that benefit from structure, process improvement, and measured expansion.
           </p>
         </div>
       </section>
 
-      {/* SKU Genius Showcase */}
+      {/* Focus Areas */}
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Live Projects</h2>
+          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Business Types We Acquire</h2>
           
-          <SKUGeniusShowcase />
-          
-          {/* Other Projects */}
-          <div className="space-y-8 mt-8">
-            {otherProjects.map((project, index) => {
-              const Icon = project.icon;
+          <div className="space-y-8">
+            {focusAreas.map((area, index) => {
+              const Icon = area.icon;
               return (
                 <div 
                   key={index}
@@ -82,48 +64,24 @@ const PortfolioPage = () => {
                     </div>
                     
                     <div className="flex-grow">
-                      <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                        <h3 className="text-2xl font-bold text-cvds-dark">
-                          {project.name}
-                        </h3>
-                        <span className="inline-block mt-2 md:mt-0 px-4 py-1 bg-cvds-primary/10 text-cvds-primary rounded-full text-sm font-medium">
-                          {project.status}
-                        </span>
-                      </div>
+                      <h3 className="text-2xl font-bold text-cvds-dark mb-4">
+                        {area.name}
+                      </h3>
                       
                       <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                        {project.description}
+                        {area.description}
                       </p>
                       
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {project.highlights.map((highlight, i) => (
+                      <div className="flex flex-wrap gap-2">
+                        {area.characteristics.map((char, i) => (
                           <span 
                             key={i}
-                            className="px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm"
+                            className="px-3 py-1 bg-cvds-primary/10 text-cvds-primary rounded-full text-sm font-medium"
                           >
-                            {highlight}
+                            {char}
                           </span>
                         ))}
                       </div>
-                      
-                      <Button
-                        variant="cvds-secondary"
-                        size="lg"
-                        className="hover:shadow-lg transition-all group"
-                        asChild
-                      >
-                        {project.link.startsWith('http') ? (
-                          <a href={project.link} target="_blank" rel="noopener noreferrer">
-                            {project.name === "AI Chat Support" ? "Follow Progress on LinkedIn" : "Join Collaboration"}
-                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                          </a>
-                        ) : (
-                          <Link to={project.link}>
-                            {project.name === "AI Chat Support" ? "Follow Progress on LinkedIn" : "Join Collaboration"}
-                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                          </Link>
-                        )}
-                      </Button>
                     </div>
                   </div>
                 </div>
@@ -133,105 +91,107 @@ const PortfolioPage = () => {
         </div>
       </section>
 
-      {/* Ongoing Concepts */}
+      {/* What We Bring */}
       <section className="py-20 px-6 bg-gradient-to-b from-white to-cvds-primary/5">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Ongoing Experiments</h2>
+          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">What We Bring Post-Acquisition</h2>
           
           <div className="grid md:grid-cols-2 gap-8">
-            {concepts.map((concept, index) => {
-              const Icon = concept.icon;
-              return (
-                <div 
-                  key={index}
-                  className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-all hover:scale-105 duration-300"
-                >
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center mb-5">
-                    <Icon className="w-7 h-7 text-white" />
-                  </div>
-                  <h3 className="text-xl font-semibold text-cvds-dark mb-3">
-                    {concept.name}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {concept.description}
-                  </p>
-                </div>
-              );
-            })}
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-semibold text-cvds-dark mb-4">Operational Structure</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Process documentation, systematisation, and operational improvements that reduce founder dependency and enable scale.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-semibold text-cvds-dark mb-4">Technology Enablement</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Strategic use of technology to improve efficiency and client delivery — not replacement of human expertise.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-semibold text-cvds-dark mb-4">International Perspective</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Cross-continental experience bridging Australia and Europe, opening new markets and partnership opportunities.
+              </p>
+            </div>
+            
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
+              <h3 className="text-xl font-semibold text-cvds-dark mb-4">Long-Term Capital</h3>
+              <p className="text-gray-600 leading-relaxed">
+                Patient approach to growth with no pressure for quick exits or aggressive restructuring.
+              </p>
+            </div>
           </div>
-
-          <p className="text-center text-gray-600 mt-12 italic text-lg">
-            Each one is a step towards a more sustainable digital ecosystem.
-          </p>
         </div>
       </section>
 
-      {/* Philosophy Link */}
+      {/* Geography */}
       <section className="py-20 px-6 bg-cvds-primary/5">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl p-10 shadow-sm border border-gray-100 text-center">
-            <h2 className="text-3xl font-bold text-cvds-dark mb-6">
-              The Thinking Behind the Building
-            </h2>
-            <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-              These projects aren't random experiments — they're guided by a philosophy of sustainable growth, 
-              founder empathy, and human-centered technology.
+          <div className="bg-white rounded-2xl p-10 shadow-sm border border-gray-100">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <Globe className="w-10 h-10 text-cvds-primary" />
+              <h2 className="text-3xl font-bold text-cvds-dark">Geographic Focus</h2>
+            </div>
+            
+            <p className="text-xl text-gray-700 mb-8 leading-relaxed text-center">
+              CVDS operates across Australia and Europe, with experience in cross-timezone operations and international business development.
             </p>
             
-            <Button 
-              variant="cvds-hero" 
-              size="lg"
-              className="text-lg px-10 py-6 h-auto group"
-              asChild
-            >
-              <Link to="/philosophy">
-                Read the Philosophy
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="text-center p-6 bg-cvds-primary/5 rounded-xl">
+                <h3 className="text-xl font-semibold text-cvds-dark mb-2">Australia</h3>
+                <p className="text-gray-600">Primary base in Perth, Western Australia</p>
+              </div>
+              <div className="text-center p-6 bg-cvds-primary/5 rounded-xl">
+                <h3 className="text-xl font-semibold text-cvds-dark mb-2">Europe</h3>
+                <p className="text-gray-600">Expanding presence and partnerships</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-cvds-dark via-cvds-primary to-cvds-secondary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-cvds-dark mb-6">
-            Want to Collaborate on a Project?
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Considering a Transition?
           </h2>
-          <p className="text-xl text-gray-700 mb-10">
-            If you're building something in this space — or considering selling — let's connect.
+          <p className="text-xl text-white/90 mb-4 leading-relaxed">
+            If your business fits these criteria and you're thinking about the next chapter, let's have a conversation.
+          </p>
+          <p className="text-lg text-white/80 mb-10 leading-relaxed">
+            No obligation. Complete confidentiality. A respectful discussion about what might be possible.
           </p>
           
-          <Button 
-            variant="cvds-secondary" 
-            size="lg"
-            className="text-lg px-10 py-6 h-auto group"
-            asChild
-          >
-            <Link to="/collaborate">
-              Discover Collaboration Opportunities
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
-        </div>
-        
-        {/* Collaboration CTA */}
-        <div className="text-center mt-16">
-          <p className="text-lg text-gray-600 mb-6 italic">
-            Each one is a step towards a more sustainable digital ecosystem.
-          </p>
-          <Button 
-            variant="cvds-hero" 
-            size="lg"
-            className="text-lg px-10 py-6 h-auto group hover:shadow-lg transition-all"
-            asChild
-          >
-            <Link to="/collaborate">
-              Join Collaboration
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              variant="cvds-secondary" 
+              size="lg"
+              className="text-lg px-10 py-6 h-auto bg-white text-cvds-primary hover:bg-white/90 group"
+              asChild
+            >
+              <Link to="/contact">
+                Start a Conversation
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </Button>
+            
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="text-lg px-10 py-6 h-auto border-2 border-white text-white hover:bg-white hover:text-cvds-primary"
+              asChild
+            >
+              <Link to="/thesis">
+                View Full Criteria
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 

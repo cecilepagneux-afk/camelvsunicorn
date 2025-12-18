@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Handshake, Users, Briefcase, Calendar, Mail, Zap, TrendingUp } from "lucide-react";
+import { Handshake, Users, Briefcase, Calendar, Mail } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -13,13 +13,13 @@ const Collaborate = () => {
       <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-white via-cvds-primary/5 to-cvds-secondary/10">
         <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
           <p className="text-lg text-cvds-secondary mb-4 font-medium">
-            Open collaboration opportunities for founders, brokers, and AI builders
+            Opportunities for founders, intermediaries, and partners
           </p>
           <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-6">
-            Work With Me
+            Work With CVDS
           </h1>
           <p className="text-2xl text-gray-700 font-light max-w-3xl mx-auto">
-            Let's find the right path forward together
+            Structured conversations. Confidential discussions. Long-term perspective.
           </p>
         </div>
       </section>
@@ -29,75 +29,59 @@ const Collaborate = () => {
         <div className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-cvds-primary/5 to-cvds-secondary/10 rounded-2xl p-10 mb-12 border border-cvds-primary/20">
             <p className="text-xl text-gray-800 leading-relaxed mb-4">
-              I collaborate with founders ready to transition, brokers sourcing small SaaS or AI tools, and builders creating automation modules.
+              CVDS works with founders considering a transition, intermediaries sourcing opportunities, and partners with aligned interests.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed">
-              Every deal is structured around <strong>alignment and continuity</strong> — not disruption. 
-              Let's find the right path forward together.
+              Every conversation is structured around <strong>alignment and continuity</strong> — not pressure or aggressive timelines. 
+              If the fit is right, we move forward. If not, the conversation remains valuable.
             </p>
           </div>
           
           {/* Banner CTA */}
           <div className="bg-gradient-to-r from-cvds-primary to-cvds-secondary p-8 rounded-2xl shadow-xl mb-16 max-w-2xl mx-auto">
             <p className="text-white text-lg font-medium mb-4">
-              Ready to start a conversation?
+              Ready to start a confidential conversation?
             </p>
             <a 
-              href="mailto:cecile.pagneux@hotmail.fr?subject=Introduction%20Call%20Request"
+              href="mailto:cecile.pagneux@hotmail.fr?subject=Confidential%20Discussion%20Request"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-cvds-primary rounded-full hover:scale-105 transition-all duration-300 font-bold shadow-lg"
             >
               <Calendar className="w-5 h-5" />
-              Book a 20-minute introduction call with Cécile
+              Schedule a Discussion
             </a>
           </div>
 
           {/* Who I Work With */}
           <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Who I Work With</h2>
           
-          {/* Badges */}
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
-            <div className="flex items-center gap-2 px-6 py-3 bg-green-50 border-2 border-green-200 rounded-full">
-              <Handshake className="w-5 h-5 text-green-600" />
-              <span className="font-semibold text-green-800">Founder-Friendly</span>
-            </div>
-            <div className="flex items-center gap-2 px-6 py-3 bg-blue-50 border-2 border-blue-200 rounded-full">
-              <Zap className="w-5 h-5 text-blue-600" />
-              <span className="font-semibold text-blue-800">Automation-Driven</span>
-            </div>
-            <div className="flex items-center gap-2 px-6 py-3 bg-purple-50 border-2 border-purple-200 rounded-full">
-              <TrendingUp className="w-5 h-5 text-purple-600" />
-              <span className="font-semibold text-purple-800">Cash-Flow Positive</span>
-            </div>
-          </div>
-          
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all hover:scale-105 duration-300">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center mb-5">
                 <Users className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-cvds-dark mb-3">Founders</h3>
               <p className="text-gray-600 leading-relaxed">
-                Ready to transition your SaaS or digital tool to someone who will respect what you've built and carry it forward thoughtfully.
+                Considering a transition for your digital B2B business. Looking for someone who will respect what you've built and carry it forward with care and structure.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all hover:scale-105 duration-300">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center mb-5">
                 <Briefcase className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-cvds-dark mb-3">Brokers & Advisors</h3>
               <p className="text-gray-600 leading-relaxed">
-                Sourcing small digital businesses (SaaS, AI tools, e-commerce modules) that fit CVDS's acquisition criteria and philosophy.
+                Sourcing digital B2B opportunities that fit CVDS's criteria. Straightforward communication, clear feedback, and respectful process throughout.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all hover:scale-105 duration-300">
+            <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
               <div className="w-14 h-14 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center mb-5">
                 <Handshake className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-cvds-dark mb-3">Builders & AI Creators</h3>
+              <h3 className="text-xl font-semibold text-cvds-dark mb-3">Strategic Partners</h3>
               <p className="text-gray-600 leading-relaxed">
-                For developers or founders designing micro-tools that could complement the CVDS ecosystem — creating automation tools, AI prototypes, or complementary technologies.
+                Aligned interests in the digital B2B space. Potential for co-investment, operational partnerships, or cross-referral arrangements.
               </p>
             </div>
           </div>
@@ -120,31 +104,27 @@ const Collaborate = () => {
               <tbody className="divide-y divide-gray-100">
                 <tr className="hover:bg-gray-50 transition-colors">
                   <td className="px-8 py-5 font-medium text-gray-700">Sector</td>
-                  <td className="px-8 py-5 text-gray-600">SaaS, AI tools, automation software, e-commerce modules</td>
+                  <td className="px-8 py-5 text-gray-600">Digital B2B services, tech-enabled businesses, structured digital operations</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors">
                   <td className="px-8 py-5 font-medium text-gray-700">Geography</td>
-                  <td className="px-8 py-5 text-gray-600">Australia, Europe (with global scalability potential)</td>
+                  <td className="px-8 py-5 text-gray-600">Australia, Europe (with international scalability potential)</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors">
-                  <td className="px-8 py-5 font-medium text-gray-700">Ticket Size</td>
+                  <td className="px-8 py-5 font-medium text-gray-700">Size</td>
                   <td className="px-8 py-5 text-gray-600">Below AUD 100K (flexible based on structure)</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors">
-                  <td className="px-8 py-5 font-medium text-gray-700">Revenue Status</td>
-                  <td className="px-8 py-5 text-gray-600">Cash-flow positive with proven product-market fit</td>
+                  <td className="px-8 py-5 font-medium text-gray-700">Revenue</td>
+                  <td className="px-8 py-5 text-gray-600">Cash-flow positive with established operations</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors">
                   <td className="px-8 py-5 font-medium text-gray-700">Deal Structure</td>
-                  <td className="px-8 py-5 text-gray-600">Vendor finance, earn-outs, joint ventures</td>
+                  <td className="px-8 py-5 text-gray-600">Vendor finance, earn-outs, equity partnerships</td>
                 </tr>
                 <tr className="hover:bg-gray-50 transition-colors">
                   <td className="px-8 py-5 font-medium text-gray-700">Transition Period</td>
-                  <td className="px-8 py-5 text-gray-600">3-12 months with founder involvement and knowledge transfer</td>
-                </tr>
-                <tr className="hover:bg-gray-50 transition-colors">
-                  <td className="px-8 py-5 font-medium text-gray-700">Philosophy Fit</td>
-                  <td className="px-8 py-5 text-gray-600">Sustainable growth, customer focus, founder-friendly approach</td>
+                  <td className="px-8 py-5 text-gray-600">3-12 months with founder involvement</td>
                 </tr>
               </tbody>
             </table>
@@ -161,32 +141,32 @@ const Collaborate = () => {
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-xl font-semibold text-cvds-dark mb-4">Founder Respect</h3>
               <p className="text-gray-600 leading-relaxed">
-                I understand what it takes to build something from scratch. Every acquisition honors the founder's vision 
-                while introducing sustainable growth practices.
+                I understand what it takes to build something. Every acquisition honours the founder's work 
+                while introducing structure and sustainable practices.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-xl font-semibold text-cvds-dark mb-4">Flexible Structures</h3>
               <p className="text-gray-600 leading-relaxed">
-                Payment terms designed around your needs — vendor finance, performance earn-outs, 
-                and ongoing involvement opportunities that align with your goals.
+                Deal terms designed around mutual benefit — vendor finance, performance components, 
+                and ongoing involvement opportunities where appropriate.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
-              <h3 className="text-xl font-semibold text-cvds-dark mb-4">Long-Term Vision</h3>
+              <h3 className="text-xl font-semibold text-cvds-dark mb-4">Long-Term Perspective</h3>
               <p className="text-gray-600 leading-relaxed">
-                Not looking for quick flips or aggressive cost-cutting. Building a portfolio of sustainable, 
-                interconnected digital assets that grow over time.
+                Not looking for quick flips. Building a portfolio of sustainable, well-operated 
+                digital businesses that grow steadily over time.
               </p>
             </div>
 
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-xl font-semibold text-cvds-dark mb-4">Collaborative Approach</h3>
               <p className="text-gray-600 leading-relaxed">
-                Transitions are partnerships, not takeovers. Your expertise, customer relationships, 
-                and brand identity are preserved and enhanced.
+                Transitions are partnerships, not takeovers. Your expertise, client relationships, 
+                and reputation are preserved and protected.
               </p>
             </div>
           </div>
@@ -194,14 +174,17 @@ const Collaborate = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-cvds-dark via-cvds-primary to-cvds-secondary">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-cvds-primary via-cvds-primary to-cvds-secondary rounded-2xl p-12 text-center text-white shadow-lg">
+          <div className="text-center text-white">
             <h2 className="text-4xl font-bold mb-6">
-              Let's Discuss a Potential Acquisition or Collaboration on AI Tools
+              Let's Have a Conversation
             </h2>
-            <p className="text-xl mb-10 opacity-95">
-              Not a pitch. Just a conversation. Let's explore what's possible together.
+            <p className="text-xl mb-4 opacity-95">
+              No obligation. Complete confidentiality. A respectful discussion about what might be possible.
+            </p>
+            <p className="text-lg mb-10 opacity-85">
+              Whether you're actively considering a transition or simply exploring options for the future, I'd welcome the opportunity to discuss.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -217,7 +200,7 @@ const Collaborate = () => {
                   rel="noopener noreferrer"
                 >
                   <Calendar className="mr-2 w-5 h-5" />
-                  Book a Call
+                  Schedule a Call
                 </a>
               </Button>
               
@@ -229,7 +212,7 @@ const Collaborate = () => {
               >
                 <Link to="/contact">
                   <Mail className="mr-2 w-5 h-5" />
-                  Send an Email
+                  Send a Message
                 </Link>
               </Button>
             </div>

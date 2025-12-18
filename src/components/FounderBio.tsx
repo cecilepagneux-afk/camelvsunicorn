@@ -24,17 +24,16 @@ const FounderBio = () => {
           <div className="flex-1 space-y-6">
             <div>
               <h3 className="text-3xl font-bold text-cvds-dark mb-2">Cécile Pagneux</h3>
-              <p className="text-xl text-cvds-primary font-medium mb-4">Founder, CVDS Digital Ventures</p>
+              <p className="text-xl text-cvds-primary font-medium mb-4">Founder & Operator, CVDS Digital Ventures</p>
             </div>
             
             <p className="text-lg text-gray-700 leading-relaxed">
-              20+ years in IT and international sales, connecting Australia and Europe through sustainable digital acquisitions. 
-              Specialising in building bridges between continents and creating lasting value for founders transitioning their businesses.
+              Over 20 years of experience in IT, digital transformation, and international B2B sales. Background in structuring, scaling, and transitioning organisations across Australia and Europe. An operator focused on execution and continuity, not disruption.
             </p>
             
             <div className="bg-gradient-to-r from-cvds-primary/5 to-cvds-secondary/5 border-l-4 border-cvds-primary p-6 rounded-r-xl">
               <p className="text-lg text-gray-700 italic leading-relaxed mb-3">
-                "Every founder deserves to see their work live on. My goal is to make that transition rewarding — for both sides."
+                "Every founder deserves to see their work continue. My role is to ensure that transition is structured, respectful, and creates value for all parties."
               </p>
               <p className="text-cvds-primary font-semibold">— Cécile Pagneux</p>
             </div>

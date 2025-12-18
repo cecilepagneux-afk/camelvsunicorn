@@ -16,22 +16,22 @@ const ContactPage = () => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
-    productName: "",
+    businessName: "",
     websiteUrl: "",
-    monthlyRevenue: "",
+    annualRevenue: "",
     description: ""
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const subject = encodeURIComponent("SaaS or AI Tool Submission");
+    const subject = encodeURIComponent("Confidential Discussion Request");
     const body = encodeURIComponent(`
 Full Name: ${formData.fullName}
 Email: ${formData.email}
-Product/Tool Name: ${formData.productName}
-Website or Demo Link: ${formData.websiteUrl}
-Monthly Revenue: ${formData.monthlyRevenue || "Not provided"}
+Business Name: ${formData.businessName}
+Website: ${formData.websiteUrl}
+Annual Revenue: ${formData.annualRevenue || "Not provided"}
 
 Description:
 ${formData.description}
@@ -60,10 +60,10 @@ ${formData.description}
       <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-white via-cvds-primary/5 to-cvds-secondary/10">
         <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
           <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-6">
-            Let's Connect
+            Let's Have a Conversation
           </h1>
           <p className="text-2xl text-cvds-primary font-light max-w-3xl mx-auto">
-            Every founder's journey starts with a conversation — let's start ours.
+            Confidential. No obligation. A respectful discussion about what might be possible.
           </p>
         </div>
       </section>
@@ -82,9 +82,9 @@ ${formData.description}
                 />
                 <div className="text-center">
                   <h2 className="text-2xl font-bold text-cvds-dark mb-2">Cécile Pagneux</h2>
-                  <p className="text-lg text-cvds-primary mb-4">Founder, CVDS Digital Ventures</p>
+                  <p className="text-lg text-cvds-primary mb-4">Founder & Operator, CVDS Digital Ventures</p>
                   <p className="text-gray-600 leading-relaxed italic">
-                    "Every founder deserves to see their work live on."
+                    "Every founder deserves to see their work continue."
                   </p>
                 </div>
               </div>
@@ -121,7 +121,7 @@ ${formData.description}
                     </div>
                     <div>
                       <p className="text-lg font-medium">Perth, Western Australia</p>
-                      <p className="text-sm text-gray-500">European expansion planned for 2028 (Spain)</p>
+                      <p className="text-sm text-gray-500">European presence planned</p>
                     </div>
                   </div>
                 </div>
@@ -146,7 +146,7 @@ ${formData.description}
                       rel="noopener noreferrer"
                     >
                       <Calendar className="mr-2 w-5 h-5" />
-                      Book a Call
+                      Schedule a Call
                     </a>
                   </Button>
 
@@ -180,7 +180,7 @@ ${formData.description}
                 </div>
 
                 <p className="text-sm text-gray-500 mt-6 italic text-center">
-                  Not a pitch. Just a conversation.
+                  All discussions are confidential.
                 </p>
               </div>
 
@@ -192,12 +192,12 @@ ${formData.description}
                   className="w-48 h-48 mx-auto bg-white p-4 rounded-lg shadow-sm"
                 />
                 <p className="text-sm text-gray-600 mt-4">
-                  Quick access to all contact information
+                  Quick access to contact information
                 </p>
               </div>
 
               <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
-                <h3 className="text-xl font-semibold text-cvds-dark mb-4">Office Hours</h3>
+                <h3 className="text-xl font-semibold text-cvds-dark mb-4">Availability</h3>
                 <p className="text-gray-600 mb-2">
                   Available for calls: <strong>Mon-Fri, 9AM-6PM AWST</strong>
                 </p>
@@ -210,19 +210,18 @@ ${formData.description}
         </div>
       </section>
 
-      {/* SaaS Submission Form */}
+      {/* Business Submission Form */}
       <section className="py-20 px-6 bg-gradient-to-b from-white to-cvds-primary/5">
         <div className="max-w-3xl mx-auto">
           <div className="bg-white rounded-2xl p-10 shadow-sm border border-gray-100">
             <h2 className="text-3xl font-bold text-cvds-dark mb-4 text-center">
-              📩 Submit a SaaS / AI Tool for Acquisition
+              Submit Your Business for Consideration
             </h2>
             <p className="text-lg text-gray-700 mb-4 text-center leading-relaxed">
-              If you're a founder considering selling your SaaS or AI project, I'd love to hear from you.
-              Fill out the quick form below — I personally review each submission and reply within 48 hours.
+              If you're a founder considering a transition for your digital B2B business, I'd welcome the opportunity to learn more.
             </p>
             <p className="text-sm text-gray-600 mb-8 text-center italic">
-              ⏱️ Average response time: under 48 hours. Confidentiality guaranteed.
+              All submissions are confidential. Response within 48 hours.
             </p>
 
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -262,30 +261,29 @@ ${formData.description}
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <Label htmlFor="productName" className="text-cvds-dark font-medium">
-                    Product / Tool Name *
+                  <Label htmlFor="businessName" className="text-cvds-dark font-medium">
+                    Business Name *
                   </Label>
                   <Input
-                    id="productName"
-                    name="productName"
+                    id="businessName"
+                    name="businessName"
                     type="text"
                     required
-                    value={formData.productName}
+                    value={formData.businessName}
                     onChange={handleChange}
                     className="mt-2 border-gray-300 focus:border-cvds-primary focus:ring-cvds-primary"
-                    placeholder="Your product name"
+                    placeholder="Your business name"
                   />
                 </div>
 
                 <div>
                   <Label htmlFor="websiteUrl" className="text-cvds-dark font-medium">
-                    Website or Demo Link *
+                    Website (optional)
                   </Label>
                   <Input
                     id="websiteUrl"
                     name="websiteUrl"
                     type="url"
-                    required
                     value={formData.websiteUrl}
                     onChange={handleChange}
                     className="mt-2 border-gray-300 focus:border-cvds-primary focus:ring-cvds-primary"
@@ -295,23 +293,23 @@ ${formData.description}
               </div>
 
               <div>
-                <Label htmlFor="monthlyRevenue" className="text-cvds-dark font-medium">
-                  Monthly Revenue (optional)
+                <Label htmlFor="annualRevenue" className="text-cvds-dark font-medium">
+                  Annual Revenue (optional)
                 </Label>
                 <Input
-                  id="monthlyRevenue"
-                  name="monthlyRevenue"
+                  id="annualRevenue"
+                  name="annualRevenue"
                   type="text"
-                  value={formData.monthlyRevenue}
+                  value={formData.annualRevenue}
                   onChange={handleChange}
                   className="mt-2 border-gray-300 focus:border-cvds-primary focus:ring-cvds-primary"
-                  placeholder="e.g., $2,000 MRR"
+                  placeholder="e.g., AUD 150K"
                 />
               </div>
 
               <div>
                 <Label htmlFor="description" className="text-cvds-dark font-medium">
-                  Short Description *
+                  Tell me about your business *
                 </Label>
                 <Textarea
                   id="description"
@@ -321,7 +319,7 @@ ${formData.description}
                   onChange={handleChange}
                   rows={5}
                   className="mt-2 border-gray-300 focus:border-cvds-primary focus:ring-cvds-primary"
-                  placeholder="Tell me about your product, its unique value, current users, tech stack, and why you're considering a sale..."
+                  placeholder="Describe your business, what it does, your client base, and why you're considering a transition..."
                 />
               </div>
 
@@ -332,25 +330,25 @@ ${formData.description}
                 className="w-full text-lg py-6 h-auto group hover:shadow-lg transition-all"
               >
                 <Send className="mr-2 w-5 h-5" />
-                Send Your Project
+                Send Your Information
               </Button>
 
               <p className="text-sm text-gray-500 text-center italic">
-                All submissions are handled with confidentiality
+                All submissions are handled with complete confidentiality.
               </p>
             </form>
           </div>
         </div>
       </section>
 
-      {/* Newsletter / Stay Connected */}
+      {/* Stay Connected */}
       <section className="py-20 px-6 bg-cvds-primary/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-cvds-primary mb-6">
-            Join the CVDS Journey
+            Stay Connected
           </h2>
           <p className="text-xl text-gray-700 mb-10">
-            Follow along on LinkedIn for updates on acquisitions, experiments, and the Camel vs Unicorn philosophy in action.
+            Follow along on LinkedIn for updates on CVDS and perspectives on digital business acquisition.
           </p>
           
           <Button 
@@ -368,22 +366,6 @@ ${formData.description}
               Follow on LinkedIn
             </a>
           </Button>
-
-          <p className="text-gray-500 mt-6 italic">
-            Join the #CamelVsUnicorn community
-          </p>
-          
-          <div className="mt-6">
-            <a 
-              href="https://www.linkedin.com/company/cvds-digital-ventures"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-cvds-primary hover:text-cvds-secondary transition-colors text-sm font-medium"
-            >
-              <Linkedin className="w-4 h-4" />
-              Visit CVDS Digital Ventures on LinkedIn
-            </a>
-          </div>
         </div>
       </section>
 
@@ -391,7 +373,7 @@ ${formData.description}
       <section className="py-12 px-6 bg-cvds-primary/5">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-gray-600 leading-relaxed">
-            © 2025 CVDS Digital Ventures · Perth (WA) – Spain (2028 Plan)
+            © 2025 CVDS Digital Ventures · Perth (WA)
           </p>
           <p className="text-sm text-gray-500 mt-2">
             camelvsunicorn.lovable.app

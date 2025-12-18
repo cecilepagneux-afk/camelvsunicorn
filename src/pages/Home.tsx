@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Zap, Target, Globe } from "lucide-react";
+import { ArrowRight, Target, TrendingUp, Globe, Briefcase } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 
@@ -14,17 +14,13 @@ const Home = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold text-cvds-dark mb-6 leading-tight">
-              Building Sustainable Digital Ventures
+              Acquiring and Operating Digital B2B Companies
             </h1>
             <p className="text-2xl md:text-3xl text-cvds-primary mb-8 font-light">
-              One acquisition and one AI tool at a time.
+              Continuity. Structure. Long-term value.
             </p>
-            <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              At CVDS Digital Ventures, I acquire and build small, automation-driven businesses that simplify, scale, and sustain digital growth responsibly.
-            </p>
-            
-            <p className="text-lg text-cvds-dark mb-12 max-w-3xl mx-auto font-medium italic">
-              We acquire, build, and scale automation-driven digital assets responsibly — where founders' work lives on.
+            <p className="text-xl text-gray-700 mb-12 max-w-3xl mx-auto leading-relaxed">
+              CVDS Digital Ventures acquires and operates digital B2B companies — services firms, tech-enabled businesses, and structured digital operations. We focus on sustainable growth, not quick exits.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -35,7 +31,7 @@ const Home = () => {
                 asChild
               >
                 <Link to="/contact">
-                  For Founders – Sell your SaaS / AI Tool
+                  Founder Considering a Transition?
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
@@ -46,38 +42,14 @@ const Home = () => {
                 className="text-lg px-10 py-6 h-auto border-2 border-cvds-primary text-cvds-primary hover:bg-cvds-primary hover:text-white transition-all"
                 asChild
               >
-                <Link to="/collaborate">
-                  For Partners – Collaborate with CVDS
-                </Link>
-              </Button>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-6">
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="text-lg px-10 py-6 h-auto border-2 border-cvds-secondary text-cvds-secondary hover:bg-cvds-secondary hover:text-white transition-all"
-                asChild
-              >
                 <Link to="/thesis">
-                  View Investment Thesis
-                </Link>
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="text-lg px-10 py-6 h-auto border-2 border-cvds-accent text-cvds-accent hover:bg-cvds-accent hover:text-white transition-all"
-                asChild
-              >
-                <Link to="/portfolio">
-                  Discover Live Projects
+                  Explore Our Acquisition Approach
                 </Link>
               </Button>
             </div>
           </div>
 
-          {/* Visual Element - Abstract Shape */}
+          {/* What We Do */}
           <div className="mt-20 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-cvds-primary/20 to-cvds-secondary/20 blur-3xl opacity-50"></div>
             <div className="relative bg-white rounded-3xl p-12 shadow-lg border border-gray-100">
@@ -92,37 +64,37 @@ const Home = () => {
                   </div>
                   <h3 className="text-xl font-semibold text-cvds-dark mb-3">Acquire</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Small, profitable SaaS and AI tools with proven product-market fit and sustainable revenue streams.
+                    Digital B2B companies with established operations, client relationships, and growth potential.
                   </p>
                 </div>
 
                 <div className="text-center animate-fade-in" style={{ animationDelay: '200ms' }}>
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center">
-                    <Zap className="w-8 h-8 text-white" />
+                    <Briefcase className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-cvds-dark mb-3">Scale</h3>
+                  <h3 className="text-xl font-semibold text-cvds-dark mb-3">Operate</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Introduce automation, better processes, and cross-business synergies while preserving brand essence.
+                    Hands-on management with focus on structuring, process improvement, and operational excellence.
                   </p>
                 </div>
 
                 <div className="text-center animate-fade-in" style={{ animationDelay: '300ms' }}>
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center">
-                    <Globe className="w-8 h-8 text-white" />
+                    <TrendingUp className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-cvds-dark mb-3">Connect</h3>
+                  <h3 className="text-xl font-semibold text-cvds-dark mb-3">Scale</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Build bridges between Australia and Europe, creating a sustainable digital ecosystem across continents.
+                    Sustainable growth through better processes, technology enablement, and market expansion.
                   </p>
                 </div>
 
                 <div className="text-center animate-fade-in" style={{ animationDelay: '400ms' }}>
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-cvds-primary to-cvds-secondary flex items-center justify-center">
-                    <Zap className="w-8 h-8 text-white" />
+                    <Globe className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-cvds-dark mb-3">Build</h3>
+                  <h3 className="text-xl font-semibold text-cvds-dark mb-3">Connect</h3>
                   <p className="text-gray-600 leading-relaxed">
-                    Create AI-powered tools that automate, simplify, and grow digital ventures responsibly — from inventory to customer experience.
+                    Building bridges between Australia and Europe for cross-continental business opportunities.
                   </p>
                 </div>
               </div>
@@ -143,7 +115,7 @@ const Home = () => {
           </h2>
           
           <p className="text-xl text-gray-700 mb-10 leading-relaxed">
-            CVDS was built around sustainable growth: building slowly, intentionally, and globally. Not chasing unicorn status — but creating lasting value, one deliberate step at a time.
+            We take a measured approach to acquisition and operation. Not chasing hypergrowth — but building lasting value through structure, continuity, and execution.
           </p>
           
           <Button 
@@ -164,11 +136,15 @@ const Home = () => {
       <section className="py-24 px-6 bg-gradient-to-br from-cvds-dark via-cvds-primary to-cvds-secondary">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-            Ready to Start a Conversation?
+            Thinking About Passing on Your Digital Business?
           </h2>
           
-          <p className="text-xl text-white/90 mb-12 leading-relaxed">
-            Whether you're a founder considering a transition, a broker with opportunities, or a builder creating automation tools — let's talk.
+          <p className="text-xl text-white/90 mb-6 leading-relaxed">
+            No obligation. Complete confidentiality. A respectful conversation with a long-term operator.
+          </p>
+          
+          <p className="text-lg text-white/80 mb-12 leading-relaxed">
+            Whether you're considering a transition now or exploring options for the future, I'd welcome the opportunity to discuss how CVDS approaches acquisitions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -178,8 +154,8 @@ const Home = () => {
               className="text-lg px-10 py-6 h-auto bg-white text-cvds-primary hover:bg-white/90"
               asChild
             >
-              <Link to="/collaborate">
-                Explore Collaboration
+              <Link to="/contact">
+                Let's Discuss a Structured Transition
               </Link>
             </Button>
             
@@ -189,8 +165,8 @@ const Home = () => {
               className="text-lg px-10 py-6 h-auto border-2 border-white text-white hover:bg-white hover:text-cvds-primary"
               asChild
             >
-              <Link to="/contact">
-                Get in Touch
+              <Link to="/thesis">
+                View Acquisition Criteria
               </Link>
             </Button>
           </div>
