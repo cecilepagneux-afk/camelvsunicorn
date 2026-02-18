@@ -10,16 +10,21 @@ const InvestmentThesis = () => {
       <Navigation />
       
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-white via-cvds-primary/5 to-cvds-secondary/10">
-        <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-6">
+      <section className="relative pt-36 pb-20 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-cvds-primary/4 to-cvds-secondary/8 pointer-events-none" />
+        <div className="relative max-w-5xl mx-auto text-center animate-fade-in-up">
+          <span className="pill bg-cvds-primary/10 text-cvds-primary mb-6 inline-flex">
+            Investment Thesis
+          </span>
+          <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-5 tracking-tight">
             Our Acquisition Approach
           </h1>
-          <p className="text-2xl text-cvds-primary font-light max-w-3xl mx-auto">
+          <p className="text-xl text-cvds-primary font-light max-w-3xl mx-auto">
             A measured, intentional approach to acquiring and operating digital B2B companies
           </p>
         </div>
       </section>
+
 
       {/* Strategic Vision */}
       <section className="py-20 px-6 bg-white">

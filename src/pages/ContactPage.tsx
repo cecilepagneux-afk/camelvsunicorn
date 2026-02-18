@@ -57,12 +57,16 @@ ${formData.description}
       <Navigation />
       
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-white via-cvds-primary/5 to-cvds-secondary/10">
-        <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
-          <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-6">
+      <section className="relative pt-36 pb-20 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-cvds-primary/4 to-cvds-secondary/8 pointer-events-none" />
+        <div className="relative max-w-5xl mx-auto text-center animate-fade-in-up">
+          <span className="pill bg-cvds-primary/10 text-cvds-primary mb-6 inline-flex">
+            Get in Touch
+          </span>
+          <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-5 tracking-tight">
             Let's Have a Conversation
           </h1>
-          <p className="text-2xl text-cvds-primary font-light max-w-3xl mx-auto">
+          <p className="text-xl text-cvds-primary font-light max-w-3xl mx-auto">
             Confidential. No obligation. A respectful discussion about what might be possible.
           </p>
         </div>
