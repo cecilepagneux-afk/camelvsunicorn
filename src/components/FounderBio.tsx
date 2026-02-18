@@ -33,7 +33,7 @@ const FounderBio = () => {
             
             <div className="bg-gradient-to-r from-cvds-primary/5 to-cvds-secondary/5 border-l-4 border-cvds-primary p-6 rounded-r-xl">
               <p className="text-lg text-gray-700 italic leading-relaxed mb-3">
-                "Every founder deserves to see their work continue. My role is to ensure that transition is structured, respectful, and creates value for all parties."
+                "Every founder deserves to see their work continue. Our role is to ensure that transition is structured, respectful, and creates value for all parties."
               </p>
               <p className="text-cvds-primary font-semibold">— Cécile Pagneux</p>
             </div>
