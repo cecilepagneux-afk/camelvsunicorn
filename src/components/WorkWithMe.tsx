@@ -6,11 +6,11 @@ const WorkWithMe = () => {
     <section className="py-24 px-6 bg-gradient-to-b from-gray-50/30 to-background">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-cvds-primary mb-8 animate-fade-in-up">
-          Work With Me
+          Work With Us
         </h2>
         
         <p className="text-xl text-gray-700 mb-12 max-w-2xl mx-auto leading-relaxed">
-          I'm always open to conversations — with founders, investors, or curious builders. If you're thinking about a transition, exploring a partnership, or just want to exchange ideas, let's connect.
+          We're always open to conversations — with founders, investors, or curious builders. If you're thinking about a transition, exploring a partnership, or just want to exchange ideas, let's connect.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

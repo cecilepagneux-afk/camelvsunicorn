@@ -6,7 +6,7 @@ const HowIWork = () => {
     <section className="py-24 px-6 bg-gradient-to-b from-cvds-primary/5 to-background">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-cvds-primary mb-12 animate-fade-in-up">
-          How I Work with Founders
+          How We Work with Founders
         </h2>
         
         <div className="bg-white rounded-2xl p-10 md:p-12 shadow-sm border border-gray-100">
@@ -16,11 +16,11 @@ const HowIWork = () => {
             </p>
             
             <p className="text-lg leading-relaxed">
-              I work closely with founders to keep the essence of what they've built alive while introducing new systems, better processes, and sustainable scale. Your customers matter. Your brand identity matters. The way you've served your community matters.
+              We work closely with founders to keep the essence of what they've built alive while introducing new systems, better processes, and sustainable scale. Your customers matter. Your brand identity matters. The way you've served your community matters.
             </p>
             
             <p className="text-lg leading-relaxed">
-              Whether it's through vendor finance, earn-outs, or joint ventures, I believe every transition should feel collaborative — not transactional. You've spent years building something meaningful. I want to honor that.
+              Whether it's through vendor finance, earn-outs, or joint ventures, we believe every transition should feel collaborative — not transactional. You've spent years building something meaningful. We want to honour that.
             </p>
             
             <p className="text-lg leading-relaxed font-medium text-cvds-primary">

@@ -222,7 +222,7 @@ ${formData.description}
               Submit Your Business for Consideration
             </h2>
             <p className="text-lg text-gray-700 mb-4 text-center leading-relaxed">
-              If you're a founder considering a transition for your digital B2B business, I'd welcome the opportunity to learn more.
+              If you're a founder considering a transition for your digital B2B business, we'd welcome the opportunity to learn more.
             </p>
             <p className="text-sm text-gray-600 mb-8 text-center italic">
               All submissions are confidential. Response within 48 hours.
@@ -313,7 +313,7 @@ ${formData.description}
 
               <div>
                 <Label htmlFor="description" className="text-cvds-dark font-medium">
-                  Tell me about your business *
+                  Tell us about your business *
                 </Label>
                 <Textarea
                   id="description"

@@ -52,8 +52,8 @@ const Collaborate = () => {
             </a>
           </div>
 
-          {/* Who I Work With */}
-          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Who I Work With</h2>
+          {/* Who We Work With */}
+          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">Who We Work With</h2>
           
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
@@ -89,10 +89,10 @@ const Collaborate = () => {
         </div>
       </section>
 
-      {/* What I Look For */}
+        {/* What We Look For */}
       <section className="py-20 px-6 bg-gradient-to-b from-white to-cvds-primary/5">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">What I Look For</h2>
+          <h2 className="text-4xl font-bold text-cvds-primary mb-12 text-center">What We Look For</h2>
           
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
             <table className="w-full">
@@ -142,7 +142,7 @@ const Collaborate = () => {
             <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-100">
               <h3 className="text-xl font-semibold text-cvds-dark mb-4">Founder Respect</h3>
               <p className="text-gray-600 leading-relaxed">
-                I understand what it takes to build something. Every acquisition honours the founder's work 
+                We understand what it takes to build something. Every acquisition honours the founder's work 
                 while introducing structure and sustainable practices.
               </p>
             </div>
@@ -185,7 +185,7 @@ const Collaborate = () => {
               No obligation. Complete confidentiality. A respectful discussion about what might be possible.
             </p>
             <p className="text-lg mb-10 opacity-85">
-              Whether you're actively considering a transition or simply exploring options for the future, I'd welcome the opportunity to discuss.
+              Whether you're actively considering a transition or simply exploring options for the future, we'd welcome the opportunity to discuss.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

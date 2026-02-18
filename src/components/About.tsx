@@ -33,7 +33,7 @@ const About = () => {
         
         <div className="bg-gradient-to-r from-cvds-primary/5 to-cvds-secondary/5 border-l-4 border-cvds-primary p-8 rounded-r-2xl max-w-3xl mx-auto">
           <p className="text-lg text-gray-700 italic leading-relaxed">
-            "Every founder deserves to see their work live on. My goal is to make that transition rewarding — for both sides."
+            "Every founder deserves to see their work live on. Our goal is to make that transition rewarding — for both sides."
           </p>
           <p className="text-cvds-primary font-semibold mt-4">— Cécile Pagneux</p>
         </div>

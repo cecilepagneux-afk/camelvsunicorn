@@ -305,7 +305,7 @@ const InvestmentThesis = () => {
             No obligation. Complete confidentiality. A respectful conversation.
           </p>
           <p className="text-lg text-white/80 mb-10 leading-relaxed">
-            If you're thinking about passing on your digital business, I'd welcome the opportunity to discuss what a structured transition might look like.
+            If you're thinking about passing on your digital business, we'd welcome the opportunity to discuss what a structured transition might look like.
           </p>
           
           <Button 

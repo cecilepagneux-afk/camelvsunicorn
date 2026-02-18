@@ -144,7 +144,7 @@ const Home = () => {
           </p>
           
           <p className="text-lg text-white/80 mb-12 leading-relaxed">
-            Whether you're considering a transition now or exploring options for the future, I'd welcome the opportunity to discuss how CVDS approaches acquisitions.
+            Whether you're considering a transition now or exploring options for the future, we'd welcome the opportunity to discuss how CVDS approaches acquisitions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
