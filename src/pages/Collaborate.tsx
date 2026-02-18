@@ -10,15 +10,16 @@ const Collaborate = () => {
       <Navigation />
       
       {/* Hero */}
-      <section className="pt-32 pb-16 px-6 bg-gradient-to-br from-white via-cvds-primary/5 to-cvds-secondary/10">
-        <div className="max-w-5xl mx-auto text-center animate-fade-in-up">
-          <p className="text-lg text-cvds-secondary mb-4 font-medium">
+      <section className="relative pt-36 pb-20 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-cvds-primary/4 to-cvds-secondary/8 pointer-events-none" />
+        <div className="relative max-w-5xl mx-auto text-center animate-fade-in-up">
+          <span className="pill bg-cvds-secondary/10 text-cvds-secondary mb-6 inline-flex">
             Opportunities for founders, intermediaries, and partners
-          </p>
-          <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-6">
+          </span>
+          <h1 className="text-5xl md:text-6xl font-bold text-cvds-dark mb-5 tracking-tight">
             Work With CVDS
           </h1>
-          <p className="text-2xl text-gray-700 font-light max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 font-light max-w-3xl mx-auto">
             Structured conversations. Confidential discussions. Long-term perspective.
           </p>
         </div>
