@@ -68,7 +68,7 @@ const RecommendationsForm = () => {
                 {/* FormSubmit Configuration - Hidden Fields */}
                 <input type="hidden" name="_subject" value="New CVDS Digital Ventures Submission" />
                 <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_captcha" value="true" />
                 <input type="hidden" name="_next" value="https://camelvsunicorn.lovable.app/thank-you" />
 
                 {/* Name */}
