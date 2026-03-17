@@ -12,7 +12,7 @@ const Navigation = () => {
   }, []);
 
   const links = [
-    { href: "#thesis", label: "Thesis" },
+    { href: "#thesis", label: "Why Australia" },
     { href: "#approach", label: "Approach" },
     { href: "#focus", label: "Focus" },
     { href: "#model", label: "Model" },
