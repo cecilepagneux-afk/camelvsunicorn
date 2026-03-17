@@ -208,23 +208,14 @@ const Home = () => {
 
       {/* ── 7. Contact ── */}
       <section id="contact" className="py-32 px-6 border-t border-border section-glow">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto">
           <div className="line-accent mx-auto mb-6" />
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Build your Australian market presence</h2>
-          <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-center">Build your Australian market presence</h2>
+          <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto leading-relaxed text-center">
             If your technology is designed for real-world impact, we can help you deploy it in Australia.
           </p>
           
-          <Button size="lg" className="text-base px-10 py-6 h-auto bg-primary text-primary-foreground hover:bg-primary/90 rounded-full group" asChild>
-            <a href="mailto:contact@cvds.ventures">
-              Get in touch
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
-          </Button>
-          
-          <p className="text-sm text-muted-foreground mt-8">
-            contact@cvds.ventures
-          </p>
+          <ContactForm />
         </div>
       </section>
 
