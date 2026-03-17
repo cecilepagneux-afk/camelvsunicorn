@@ -3,7 +3,6 @@ import { ArrowRight, Shield, Cpu, Brain, Server, Layers } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
-import Footer from "@/components/Footer";
 
 const Home = () => {
   return (
