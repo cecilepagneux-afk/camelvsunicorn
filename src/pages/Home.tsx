@@ -65,7 +65,7 @@ const Home = () => {
             Why Australia
           </h2>
           
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
+          <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl">
             <p>
               Australia is one of the most advanced environments for deploying critical technologies.
             </p>
