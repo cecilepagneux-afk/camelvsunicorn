@@ -31,8 +31,8 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "py-4" : "py-6"}`}>
-          <a href="#" className="text-lg font-bold tracking-tight text-foreground hover:text-primary transition-colors">
-            CVDS
+          <a href="#" className="hover:opacity-80 transition-opacity">
+            <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-8" />
           </a>
 
           <div className="hidden md:flex items-center gap-8">
