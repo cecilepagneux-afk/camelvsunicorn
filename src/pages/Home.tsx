@@ -201,7 +201,7 @@ const Home = () => {
           <div className="line-accent mb-6" />
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">Partnerships</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Who we work with</h2>
-          <p className="text-lg text-muted-foreground mb-16 max-w-2xl">
+          <p className="text-base md:text-lg text-muted-foreground mb-16 max-w-2xl">
             We work with companies and partners building technologies for real-world deployment.
           </p>
           
