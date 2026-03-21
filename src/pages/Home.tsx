@@ -227,7 +227,7 @@ const Home = () => {
         <div className={`max-w-3xl mx-auto ${revealClasses(contact.isVisible)}`}>
           <div className="line-accent mx-auto mb-6" />
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-center">Build your Australian market presence</h2>
-          <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto leading-relaxed text-center">
+          <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-xl mx-auto leading-relaxed text-center">
             If your technology is designed for real-world impact, we can help you deploy it in Australia.
           </p>
           
