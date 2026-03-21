@@ -37,7 +37,7 @@ const Home = () => {
             <span className="text-gradient">in&nbsp;Australia</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s", animationFillMode: "both" }}>
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s", animationFillMode: "both" }}>
             CVDS Digital Ventures partners with deep-tech companies to establish, deploy and scale their solutions across Australia's industrial sectors.
           </p>
           
