@@ -31,7 +31,7 @@ const Home = () => {
             Cybersecurity · Industrial Systems · AI Technologies
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8 tracking-tight animate-fade-in-up">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8 tracking-tight animate-fade-in-up">
             Building critical<br />
             technology ventures{" "}
             <span className="text-gradient">in&nbsp;Australia</span>
