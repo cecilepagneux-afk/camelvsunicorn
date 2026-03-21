@@ -168,7 +168,7 @@ const Home = () => {
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">Our model</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">How we operate</h2>
           
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12">
+          <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12">
             <p>
               CVDS operates as a market builder — not a traditional venture studio or consulting firm.
             </p>
