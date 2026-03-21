@@ -31,13 +31,13 @@ const Home = () => {
             Cybersecurity · Industrial Systems · AI Technologies
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8 tracking-tight animate-fade-in-up">
+          <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold leading-[0.95] mb-8 tracking-tight animate-fade-in-up">
             Building critical<br />
             technology ventures{" "}
             <span className="text-gradient">in&nbsp;Australia</span>
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s", animationFillMode: "both" }}>
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed animate-fade-in-up" style={{ animationDelay: "0.2s", animationFillMode: "both" }}>
             CVDS Digital Ventures partners with deep-tech companies to establish, deploy and scale their solutions across Australia's industrial sectors.
           </p>
           
@@ -65,7 +65,7 @@ const Home = () => {
             Why Australia
           </h2>
           
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl">
+          <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl">
             <p>
               Australia is one of the most advanced environments for deploying critical technologies.
             </p>
@@ -135,7 +135,7 @@ const Home = () => {
           <div className="line-accent mb-6" />
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">Focus areas</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Where we operate</h2>
-          <p className="text-lg text-muted-foreground mb-16 max-w-2xl">
+          <p className="text-base md:text-lg text-muted-foreground mb-16 max-w-2xl">
             We focus on technologies that impact real-world systems.
           </p>
           
@@ -168,7 +168,7 @@ const Home = () => {
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">Our model</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-8 tracking-tight">How we operate</h2>
           
-          <div className="space-y-6 text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12">
+          <div className="space-y-6 text-base md:text-lg text-muted-foreground leading-relaxed max-w-3xl mb-12">
             <p>
               CVDS operates as a market builder — not a traditional venture studio or consulting firm.
             </p>
@@ -201,7 +201,7 @@ const Home = () => {
           <div className="line-accent mb-6" />
           <p className="text-sm font-medium text-primary uppercase tracking-widest mb-4">Partnerships</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Who we work with</h2>
-          <p className="text-lg text-muted-foreground mb-16 max-w-2xl">
+          <p className="text-base md:text-lg text-muted-foreground mb-16 max-w-2xl">
             We work with companies and partners building technologies for real-world deployment.
           </p>
           
@@ -227,7 +227,7 @@ const Home = () => {
         <div className={`max-w-3xl mx-auto ${revealClasses(contact.isVisible)}`}>
           <div className="line-accent mx-auto mb-6" />
           <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-center">Build your Australian market presence</h2>
-          <p className="text-lg text-muted-foreground mb-12 max-w-xl mx-auto leading-relaxed text-center">
+          <p className="text-base md:text-lg text-muted-foreground mb-12 max-w-xl mx-auto leading-relaxed text-center">
             If your technology is designed for real-world impact, we can help you deploy it in Australia.
           </p>
           

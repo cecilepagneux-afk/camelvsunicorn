@@ -68,6 +68,8 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -79,6 +81,13 @@
 
   html {
     scroll-behavior: smooth;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 17px;
+      line-height: 1.75;
+    }
   }
 }
 
