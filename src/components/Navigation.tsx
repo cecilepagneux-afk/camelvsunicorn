@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
+import cvdsLogo from "@/assets/cvds-logo-main.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
