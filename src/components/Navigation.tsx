@@ -29,22 +29,28 @@ const Navigation = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "py-4" : "py-6"}`}>
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+        <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "py-3" : "py-4"}`}>
           <a href="#" className="hover:opacity-80 transition-opacity">
-            <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-14 md:h-16 rounded-md" />
+            <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-12 md:h-14 rounded-md" />
           </a>
 
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-7">
             {links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                className="text-[0.875rem] font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>
             ))}
+            <a
+              href="#contact"
+              className="bg-primary text-primary-foreground hover:bg-[hsl(var(--primary-dim))] transition-colors text-[0.875rem] font-semibold px-5 py-2 rounded-lg whitespace-nowrap"
+            >
+              Work with us
+            </a>
           </div>
 
           <button
