@@ -1,26 +1,26 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
+import Nav from './components/Nav';
+import Hero from './components/Hero';
+import Why from './components/Why';
+import Approach from './components/Approach';
+import ForWho from './components/ForWho';
+import Model from './components/Model';
+import Focus from './components/Focus';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-const queryClient = new QueryClient();
+export default function App() {
+  return (
+    <div className="bg-[#080c14] text-slate-100 font-sans overflow-x-hidden">
+      <Nav />
+      <Hero />
+      <Why />
+      <Approach />
+      <ForWho />
+      <Model />
+      <Focus />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
-
-export default App;
