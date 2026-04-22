@@ -1,68 +1,52 @@
-import { Button } from "@/components/ui/button";
-import professionalBanner from "@/assets/professional-hero-banner.jpg";
-import cvdsLogo from "@/assets/cvds-logo.png";
-
-const Hero = () => {
+export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Hero Banner */}
-      <div 
-        className="absolute inset-0 z-0"
+    <section id="hero" className="relative min-h-screen flex items-center justify-center px-[5%] pt-[100px] pb-20 overflow-hidden">
+      {/* Grid background */}
+      <div className="absolute inset-0"
         style={{
-          backgroundImage: `url(${professionalBanner})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundImage: 'linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)',
+          backgroundSize: '60px 60px',
+          maskImage: 'radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent)',
+          WebkitMaskImage: 'radial-gradient(ellipse 80% 60% at 50% 50%, black, transparent)',
         }}
       />
-      
-      {/* Content */}
-      <div className="relative z-30 text-center text-white px-6 max-w-4xl mx-auto">
-        {/* Logo */}
-        <div className="mb-12">
-          <img 
-            src={cvdsLogo} 
-            alt="CVDS Digital Ventures Logo" 
-            className="h-52 md:h-64 lg:h-80 xl:h-96 mx-auto mb-6 drop-shadow-2xl"
-          />
+      {/* Glow */}
+      <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[640px] h-[320px] pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse, rgba(26,110,212,0.13), transparent 70%)' }} />
+
+      <div className="relative text-center max-w-[860px]">
+        <div className="inline-flex items-center gap-2 bg-[rgba(26,110,212,0.1)] border border-[rgba(26,110,212,0.3)] rounded-full px-4 py-1.5 text-xs font-medium text-blue-400 mb-8 font-mono tracking-wide">
+          <span className="w-[7px] h-[7px] bg-[#1A6ED4] rounded-full animate-pulse" />
+          Deep-tech · Cybersecurity · AI · Industrial Systems
         </div>
-        
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight animate-fade-in-up">
-          We Acquire Profitable Digital Businesses
+
+        <h1 className="text-[clamp(2.6rem,5.5vw,4.6rem)] font-extrabold leading-[1.1] tracking-tight mb-6">
+          Your technology.<br />
+          <span className="text-[#1A6ED4]">Deployed in Australia.</span>
         </h1>
-        
-        <p className="text-lg md:text-xl mb-6 text-white/80 italic animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          Because behind every dataset, there's still a founder's story.
+
+        <p className="text-[clamp(1rem,2vw,1.15rem)] text-slate-400 max-w-[620px] mx-auto mb-10 leading-[1.75]">
+          CVDS Digital Ventures helps international deep-tech startups establish a real market presence in Australia — from positioning and market access to pilot programs and commercial traction.
         </p>
-        
-        <p className="text-xl md:text-2xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          Specialising in SaaS, SEO sites, marketplaces & newsletters – with a human and growth-oriented approach.
-        </p>
-        
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button 
-            variant="cvds-hero" 
-            size="lg"
-            className="text-lg px-10 py-6 cursor-pointer h-auto rounded-full min-w-[240px]"
-            onClick={() => window.open('https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition', '_blank')}
-          >
-            Propose Your Business
-          </Button>
-          <Button 
-            variant="cvds-primary" 
-            size="lg"
-            className="text-lg px-10 py-6 cursor-pointer h-auto rounded-full min-w-[240px]"
-            onClick={() => window.open('https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition', '_blank')}
-          >
-            Book a Call
-          </Button>
+
+        <div className="flex gap-4 justify-center flex-wrap">
+          <a href="#contact" className="bg-[#1A6ED4] hover:bg-[#1558b0] text-white px-8 py-3.5 rounded-xl font-bold text-[0.95rem] no-underline transition-all shadow-[0_0_24px_rgba(26,110,212,0.35)] hover:shadow-[0_0_36px_rgba(26,110,212,0.5)] hover:-translate-y-px">
+            Start a conversation →
+          </a>
+          <a href="#approach" className="bg-transparent text-slate-100 border border-white/10 hover:border-white/25 hover:bg-white/[0.04] px-8 py-3.5 rounded-xl font-semibold text-[0.95rem] no-underline transition-all flex items-center gap-2">
+            How we help
+          </a>
+        </div>
+
+        <div className="flex justify-center gap-12 mt-16 pt-10 border-t border-white/[0.08] flex-wrap">
+          {[['3+','Critical sectors covered'],['Perth','Western Australia HQ'],['End-to-end','From positioning to pilot']].map(([num, label]) => (
+            <div key={label} className="text-center">
+              <div className="text-[1.6rem] font-extrabold text-[#1A6ED4] font-mono">{num}</div>
+              <div className="text-xs text-slate-400 mt-1">{label}</div>
+            </div>
+          ))}
         </div>
       </div>
-      
-      {/* Decorative Elements */}
-      <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-background to-transparent z-20" />
     </section>
   );
-};
-
-export default Hero;
+}
