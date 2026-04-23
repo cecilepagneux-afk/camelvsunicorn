@@ -12,12 +12,12 @@ export default function Nav() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5%] h-[112px] transition-all ${scrolled ? 'bg-[rgba(8,12,20,0.95)] backdrop-blur-lg border-b border-white/[0.08]' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5%] h-[68px] transition-all ${scrolled ? 'bg-[rgba(8,12,20,0.95)] backdrop-blur-lg border-b border-white/[0.08]' : 'bg-transparent'}`}>
       <a href="#" className="flex items-center gap-2 no-underline">
-        <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-[72px] w-auto object-contain" />
+        <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-9 w-auto object-contain" />
       </a>
       <ul className="hidden md:flex gap-8 list-none">
-        {[['#why','Why Australia'],['#approach','How We Help'],['#forwho','Who We Work With'],['#model','Our Model'],['#focus','Focus Areas']].map(([href, label]) => (
+        {[['#why','Why Australia'],['#approach','How We Help'],['#forwho','Who We Work With'],['#model','Our Model']].map(([href, label]) => (
           <li key={href}>
             <a href={href} className="text-slate-400 no-underline text-sm font-medium hover:text-slate-100 transition-colors">{label}</a>
           </li>
@@ -30,4 +30,3 @@ export default function Nav() {
     </nav>
   );
 }
-
