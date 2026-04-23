@@ -1,3 +1,5 @@
+const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
+
 const steps = [
   { num: '01', title: 'Pilot deployment with industrial operators', desc: 'We structure and manage technology pilots inside real operational environments with our network of Australian industrial partners.' },
   { num: '02', title: 'Commercial structuring & partnerships', desc: 'We help structure commercial agreements, joint ventures and partnership frameworks suited to Australian industrial procurement cycles.' },
@@ -34,7 +36,8 @@ export default function Model() {
             <p className="text-slate-400 text-[0.9rem] leading-[1.75] mb-8">
               We are selective. We only take on engagements where we believe we can create genuine commercial traction within 12 months.
             </p>
-            <a href="#contact" className="inline-block bg-[#1A6ED4] hover:bg-[#1558b0] text-white px-7 py-3.5 rounded-xl font-bold text-[0.95rem] no-underline transition-all shadow-[0_0_24px_rgba(26,110,212,0.35)] hover:-translate-y-px">
+            <a href={CALENDLY} target="_blank" rel="noopener noreferrer"
+              className="inline-block bg-[#1A6ED4] hover:bg-[#1558b0] text-white px-7 py-3.5 rounded-xl font-bold text-[0.95rem] no-underline transition-all shadow-[0_0_24px_rgba(26,110,212,0.35)] hover:-translate-y-px">
               Start a conversation →
             </a>
           </div>
