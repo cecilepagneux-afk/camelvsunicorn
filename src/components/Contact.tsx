@@ -8,9 +8,6 @@ export default function Contact() {
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
-    setTimeout(() => {
-      window.open(CALENDLY, '_blank', 'noopener,noreferrer');
-    }, 800);
   };
 
   return (
