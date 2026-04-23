@@ -1,3 +1,5 @@
+const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
+
 export default function Hero() {
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center px-[5%] pt-[100px] pb-20 overflow-hidden">
@@ -30,7 +32,8 @@ export default function Hero() {
         </p>
 
         <div className="flex gap-4 justify-center flex-wrap">
-          <a href="#contact" className="bg-[#1A6ED4] hover:bg-[#1558b0] text-white px-8 py-3.5 rounded-xl font-bold text-[0.95rem] no-underline transition-all shadow-[0_0_24px_rgba(26,110,212,0.35)] hover:shadow-[0_0_36px_rgba(26,110,212,0.5)] hover:-translate-y-px">
+          <a href={CALENDLY} target="_blank" rel="noopener noreferrer"
+            className="bg-[#1A6ED4] hover:bg-[#1558b0] text-white px-8 py-3.5 rounded-xl font-bold text-[0.95rem] no-underline transition-all shadow-[0_0_24px_rgba(26,110,212,0.35)] hover:shadow-[0_0_36px_rgba(26,110,212,0.5)] hover:-translate-y-px">
             Start a conversation →
           </a>
           <a href="#approach" className="bg-transparent text-slate-100 border border-white/10 hover:border-white/25 hover:bg-white/[0.04] px-8 py-3.5 rounded-xl font-semibold text-[0.95rem] no-underline transition-all flex items-center gap-2">
