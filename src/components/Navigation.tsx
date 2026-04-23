@@ -32,7 +32,7 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className={`flex items-center justify-between transition-all duration-300 ${scrolled ? "py-3" : "py-4"}`}>
           <a href="#" className="hover:opacity-80 transition-opacity">
-            <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-20 md:h-24 rounded-md" />
+            <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-40 md:h-48 rounded-md" />
           </a>
 
           <div className="hidden md:flex items-center gap-7">
