@@ -9,10 +9,10 @@ const navLinks = [
   { label: 'Our Model', href: '#model' },
 ];
 const focusLinks = [
-  { label: 'Cybersecurity', href: '#focus' },
-  { label: 'Industrial Systems', href: '#focus' },
-  { label: 'AI Technologies', href: '#focus' },
-  { label: 'Energy & Defence', href: '#focus' },
+  { label: 'Cybersecurity', href: '#why' },
+  { label: 'Industrial Systems', href: '#why' },
+  { label: 'AI Technologies', href: '#why' },
+  { label: 'Energy & Defence', href: '#why' },
 ];
 const contactLinks = [
   { label: 'Start a conversation', href: CALENDLY, external: true },
@@ -26,7 +26,7 @@ export default function Footer() {
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
         <div className="md:col-span-1">
           <a href="#" className="flex items-center gap-2 no-underline mb-3">
-            <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-32 w-auto object-contain" />
+            <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-8 w-auto object-contain" />
           </a>
           <p className="text-slate-400 text-sm leading-[1.7] max-w-[260px]">
             Helping international deep-tech companies deploy and scale in Australia. Market builder for cybersecurity, AI, industrial and energy technology companies.
