@@ -1,3 +1,7 @@
+import cvdsLogo from './cvds-logo.png';
+
+const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
+
 const navLinks = [
   { label: 'Why Australia', href: '#why' },
   { label: 'How We Help', href: '#approach' },
@@ -11,9 +15,9 @@ const focusLinks = [
   { label: 'Energy & Defence', href: '#focus' },
 ];
 const contactLinks = [
-  { label: 'Start a conversation', href: '#contact' },
-  { label: 'Partner with us', href: '#contact' },
-  { label: 'Perth, Western Australia', href: '#' },
+  { label: 'Start a conversation', href: CALENDLY, external: true },
+  { label: 'Partner with us', href: CALENDLY, external: true },
+  { label: 'Perth, Western Australia', href: '#', external: false },
 ];
 
 export default function Footer() {
@@ -21,9 +25,8 @@ export default function Footer() {
     <footer className="bg-[#0d1422] border-t border-white/[0.08] px-[5%] pt-12 pb-8">
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
         <div className="md:col-span-1">
-          <a href="#" className="flex items-center gap-2.5 font-bold text-base tracking-[0.04em] no-underline text-slate-100 mb-3">
-            <div className="w-8 h-8 bg-[#1A6ED4] rounded-lg grid place-items-center text-xs font-extrabold text-white">CV</div>
-            CVDS Digital Ventures
+          <a href="#" className="flex items-center gap-2 no-underline mb-3">
+            <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-8 w-auto object-contain" />
           </a>
           <p className="text-slate-400 text-sm leading-[1.7] max-w-[260px]">
             Helping international deep-tech companies deploy and scale in Australia. Market builder for cybersecurity, AI, industrial and energy technology companies.
@@ -37,9 +40,15 @@ export default function Footer() {
           <div key={col.title}>
             <h5 className="text-xs font-semibold tracking-[0.1em] uppercase text-slate-400 mb-4">{col.title}</h5>
             <ul className="list-none flex flex-col gap-2.5">
-              {col.links.map(l => (
+              {col.links.map((l: { label: string; href: string; external?: boolean }) => (
                 <li key={l.label}>
-                  <a href={l.href} className="text-slate-400 hover:text-slate-100 no-underline text-sm transition-colors">{l.label}</a>
+                  <a
+                    href={l.href}
+                    {...(l.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    className="text-slate-400 hover:text-slate-100 no-underline text-sm transition-colors"
+                  >
+                    {l.label}
+                  </a>
                 </li>
               ))}
             </ul>
