@@ -4,7 +4,7 @@ import Why from './components/Why';
 import Approach from './components/Approach';
 import ForWho from './components/ForWho';
 import Model from './components/Model';
-import Focus from './components/Focus';
+import Focus from './components/InvestmentFocus';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
