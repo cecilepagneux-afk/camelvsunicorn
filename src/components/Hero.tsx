@@ -27,8 +27,8 @@ export default function Hero() {
           <span className="text-[#1A6ED4]">Deployed in Australia.</span>
         </h1>
 
-        <p className="text-[clamp(1rem,2vw,1.15rem)] text-slate-400 max-w-[620px] mx-auto mb-10 leading-[1.75]">
-          CVDS Digital Ventures helps international deep-tech startups establish a real market presence in Australia — from positioning and market access to pilot programs and commercial traction.
+        <p className="text-[clamp(1rem,2vw,1.15rem)] text-slate-400 max-w-[560px] mx-auto mb-10 leading-[1.75]">
+          We help international deep-tech companies deploy, pilot, and scale in Australia — from first positioning to commercial contract.
         </p>
 
         <div className="flex gap-4 justify-center flex-wrap">
@@ -42,7 +42,7 @@ export default function Hero() {
         </div>
 
         <div className="flex justify-center gap-12 mt-16 pt-10 border-t border-white/[0.08] flex-wrap">
-          {[['3+','Critical sectors covered'],['Perth','Western Australia HQ'],['End-to-end','From positioning to pilot']].map(([num, label]) => (
+          {[['12 months','To commercial traction'],['5 sectors','Cybersecurity · AI · Energy · Defence · Industrial'],['Perth, WA','On the ground in Australia']].map(([num, label]) => (
             <div key={label} className="text-center">
               <div className="text-[1.6rem] font-extrabold text-[#1A6ED4] font-mono">{num}</div>
               <div className="text-xs text-slate-400 mt-1">{label}</div>
