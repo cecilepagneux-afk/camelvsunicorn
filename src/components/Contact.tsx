@@ -1,13 +1,35 @@
-import { useState, FormEvent } from 'react';
+import { useState, FormEvent, useRef } from 'react';
 
 const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
+const FORMSPREE_ID = 'xdayyvor';
 
 export default function Contact() {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const formRef = useRef<HTMLFormElement>(null);
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus('sending');
+
+    const form = formRef.current!;
+    const data = new FormData(form);
+
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -41,36 +63,48 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+          <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-4">
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs font-semibold text-slate-400 mb-1">First name</label>
-                <input type="text" placeholder="Jane" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
+                <input name="first_name" type="text" placeholder="Jane" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
               </div>
               <div>
                 <label className="block text-xs font-semibold text-slate-400 mb-1">Last name</label>
-                <input type="text" placeholder="Smith" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
+                <input name="last_name" type="text" placeholder="Smith" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
               </div>
             </div>
             <div>
               <label className="block text-xs font-semibold text-slate-400 mb-1">Work email</label>
-              <input type="email" placeholder="jane@acme.com" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
+              <input name="email" type="email" placeholder="jane@acme.com" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
             </div>
             <div>
               <label className="block text-xs font-semibold text-slate-400 mb-1">Technology sector</label>
-              <select className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-400 text-sm outline-none transition-colors">
+              <select name="sector" className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-400 text-sm outline-none transition-colors">
                 <option value="">Select your sector</option>
                 {['Cybersecurity','Industrial Systems & Automation','AI / Machine Learning','Energy Technology','Defence Technology','Critical Infrastructure','Other'].map(o => <option key={o}>{o}</option>)}
               </select>
             </div>
+
             <button
               type="submit"
-              disabled={submitted}
-              className={`w-full py-3.5 rounded-xl font-bold text-base text-white transition-all border-none cursor-pointer ${submitted ? 'bg-emerald-600 shadow-none' : 'bg-[#1A6ED4] hover:bg-[#1558b0] shadow-[0_0_24px_rgba(26,110,212,0.35)] hover:shadow-[0_0_36px_rgba(26,110,212,0.5)] hover:-translate-y-px'}`}
+              disabled={status === 'sending' || status === 'success'}
+              className={`w-full py-3.5 rounded-xl font-bold text-base text-white transition-all border-none cursor-pointer ${
+                status === 'success' ? 'bg-emerald-600 shadow-none' :
+                status === 'sending' ? 'bg-[#1A6ED4] opacity-60 cursor-wait' :
+                'bg-[#1A6ED4] hover:bg-[#1558b0] shadow-[0_0_24px_rgba(26,110,212,0.35)] hover:shadow-[0_0_36px_rgba(26,110,212,0.5)] hover:-translate-y-px'
+              }`}
             >
-              {submitted ? '✓ Book your intro call below' : 'Request an intro call →'}
+              {status === 'sending' ? 'Sending…' :
+               status === 'success' ? '✓ Sent — book your intro call below' :
+               'Request an intro call →'}
             </button>
-            {submitted && (
+
+            {status === 'error' && (
+              <p className="text-red-400 text-xs text-center">Something went wrong. Please try again or email us directly.</p>
+            )}
+
+            {status === 'success' && (
               <a href={CALENDLY} target="_blank" rel="noopener noreferrer"
                 className="w-full py-3.5 rounded-xl font-bold text-base text-white text-center no-underline bg-emerald-600 hover:bg-emerald-700 transition-all block">
                 Open Calendly — pick a time →
