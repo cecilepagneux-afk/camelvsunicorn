@@ -1,5 +1,3 @@
-import cvdsLogo from './cvds-logo.png';
-
 const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
 
 const navLinks = [
@@ -25,8 +23,24 @@ export default function Footer() {
     <footer className="bg-[#0d1422] border-t border-white/[0.08] px-[5%] pt-12 pb-8">
       <div className="max-w-[1100px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 mb-10">
         <div className="md:col-span-1">
-          <a href="#" className="flex items-center gap-2 no-underline mb-3">
-            <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-11 w-auto object-contain" />
+          <a href="#" className="flex items-center gap-2.5 no-underline mb-3">
+            <div className="w-8 h-8 rounded-lg bg-[rgba(26,110,212,0.15)] border border-[rgba(26,110,212,0.4)] flex items-center justify-center flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="9" cy="9" r="2.5" fill="#1A6ED4"/>
+                <circle cx="3" cy="4" r="1.8" fill="#22c55e"/>
+                <circle cx="15" cy="4" r="1.8" fill="#22c55e"/>
+                <circle cx="3" cy="14" r="1.8" fill="#22c55e"/>
+                <circle cx="15" cy="14" r="1.8" fill="#22c55e"/>
+                <line x1="9" y1="9" x2="3" y2="4" stroke="#22c55e" strokeWidth="1.2" strokeOpacity="0.7"/>
+                <line x1="9" y1="9" x2="15" y2="4" stroke="#22c55e" strokeWidth="1.2" strokeOpacity="0.7"/>
+                <line x1="9" y1="9" x2="3" y2="14" stroke="#22c55e" strokeWidth="1.2" strokeOpacity="0.7"/>
+                <line x1="9" y1="9" x2="15" y2="14" stroke="#22c55e" strokeWidth="1.2" strokeOpacity="0.7"/>
+              </svg>
+            </div>
+            <div className="flex flex-col leading-none">
+              <span className="text-white font-extrabold text-[1.05rem] tracking-tight">CVDS</span>
+              <span className="text-slate-400 text-[0.65rem] tracking-[0.08em] uppercase font-medium">Digital Ventures</span>
+            </div>
           </a>
           <p className="text-slate-400 text-sm leading-[1.7] max-w-[260px]">
             Helping international deep-tech companies deploy and scale in Australia. Market builder for cybersecurity, AI, industrial and energy technology companies.
