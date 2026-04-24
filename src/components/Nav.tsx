@@ -17,7 +17,7 @@ export default function Nav() {
         <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-20 w-auto object-contain" />
       </a>
       <ul className="hidden md:flex gap-8 list-none">
-        {[['#why','Why Australia'],['#approach','How We Help'],['#forwho','Who We Work With'],['#model','Our Model']].map(([href, label]) => (
+        {[['#why','Why Australia'],['#approach','How We Help'],['#forwho','Who We Work With'],['#about','About'],['#model','Our Model']].map(([href, label]) => (
           <li key={href}>
             <a href={href} className="text-slate-400 no-underline text-sm font-medium hover:text-slate-100 transition-colors">{label}</a>
           </li>
