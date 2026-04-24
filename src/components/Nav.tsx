@@ -14,7 +14,7 @@ export default function Nav() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5%] h-[68px] transition-all ${scrolled ? 'bg-[rgba(8,12,20,0.95)] backdrop-blur-lg border-b border-white/[0.08]' : 'bg-transparent'}`}>
       <a href="#" className="flex items-center gap-2 no-underline">
-        <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-9 w-auto object-contain" />
+        <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-12 w-auto object-contain" />
       </a>
       <ul className="hidden md:flex gap-8 list-none">
         {[['#why','Why Australia'],['#approach','How We Help'],['#forwho','Who We Work With'],['#model','Our Model']].map(([href, label]) => (
