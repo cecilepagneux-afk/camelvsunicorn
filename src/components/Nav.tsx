@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import cvdsLogo from './cvds-logo.png';
 
 const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
 
@@ -12,24 +13,8 @@ export default function Nav() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-[5%] h-[68px] transition-all ${scrolled ? 'bg-[rgba(8,12,20,0.95)] backdrop-blur-lg border-b border-white/[0.08]' : 'bg-transparent'}`}>
-      <a href="#" className="flex items-center gap-2.5 no-underline group">
-        <div className="w-8 h-8 rounded-lg bg-[rgba(26,110,212,0.15)] border border-[rgba(26,110,212,0.4)] flex items-center justify-center flex-shrink-0">
-          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="9" cy="9" r="2.5" fill="#1A6ED4"/>
-            <circle cx="3" cy="4" r="1.8" fill="#22c55e"/>
-            <circle cx="15" cy="4" r="1.8" fill="#22c55e"/>
-            <circle cx="3" cy="14" r="1.8" fill="#22c55e"/>
-            <circle cx="15" cy="14" r="1.8" fill="#22c55e"/>
-            <line x1="9" y1="9" x2="3" y2="4" stroke="#22c55e" strokeWidth="1.2" strokeOpacity="0.7"/>
-            <line x1="9" y1="9" x2="15" y2="4" stroke="#22c55e" strokeWidth="1.2" strokeOpacity="0.7"/>
-            <line x1="9" y1="9" x2="3" y2="14" stroke="#22c55e" strokeWidth="1.2" strokeOpacity="0.7"/>
-            <line x1="9" y1="9" x2="15" y2="14" stroke="#22c55e" strokeWidth="1.2" strokeOpacity="0.7"/>
-          </svg>
-        </div>
-        <div className="flex flex-col leading-none">
-          <span className="text-white font-extrabold text-[1.05rem] tracking-tight">CVDS</span>
-          <span className="text-slate-400 text-[0.65rem] tracking-[0.08em] uppercase font-medium">Digital Ventures</span>
-        </div>
+      <a href="#" className="flex items-center no-underline">
+        <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-20 w-auto object-contain" />
       </a>
       <ul className="hidden md:flex gap-8 list-none">
         {[['#why','Why Australia'],['#approach','How We Help'],['#forwho','Who We Work With'],['#model','Our Model']].map(([href, label]) => (
