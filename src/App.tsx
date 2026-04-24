@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import Why from './components/Why';
 import Approach from './components/Approach';
 import ForWho from './components/ForWho';
+import About from './components/About';
 import Model from './components/Model';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -15,10 +16,10 @@ export default function App() {
       <Why />
       <Approach />
       <ForWho />
+      <About />
       <Model />
       <Contact />
       <Footer />
     </div>
   );
 }
-
