@@ -1,3 +1,5 @@
+import cvdsLogo from './cvds-logo.png';
+
 const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
 
 const navLinks = [
