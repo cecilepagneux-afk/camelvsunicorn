@@ -89,7 +89,7 @@ const OurAcquisitionProcess = () => {
             asChild
           >
             <a 
-              href="https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition" 
+              href="https://calendly.com/cecile-pagneux/intro-call-australian-market-entry" 
               target="_blank"
               rel="noopener noreferrer"
             >

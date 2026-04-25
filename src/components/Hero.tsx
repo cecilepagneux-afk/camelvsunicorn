@@ -1,4 +1,4 @@
-const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
+const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-australian-market-entry';
 
 export default function Hero() {
   return (

@@ -1,4 +1,4 @@
-const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
+const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-australian-market-entry';
 
 const steps = [
   { num: '01', title: 'Pilot deployment with industrial operators', desc: 'We structure and manage technology pilots inside real operational environments with our network of Australian industrial partners.' },

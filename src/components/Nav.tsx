@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import cvdsLogo from './cvds-logo.png';
 
-const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
+const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-australian-market-entry';
 
 const links = [
   ['#why', 'Why Australia'],

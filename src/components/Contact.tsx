@@ -1,6 +1,6 @@
 import { useState, FormEvent, useRef } from 'react';
 
-const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-digital-business-acquisition';
+const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-australian-market-entry';
 const FORMSPREE_ID = 'xdayyvor';
 
 export default function Contact() {
