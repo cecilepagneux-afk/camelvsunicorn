@@ -18,6 +18,7 @@ const contactLinks = [
   { label: 'Start a conversation', href: CALENDLY, external: true },
   { label: 'Partner with us', href: CALENDLY, external: true },
   { label: 'Perth, Western Australia', href: '#', external: false },
+  { label: 'cecile.pagneux@cvds-ventures.com', href: 'mailto:cecile.pagneux@cvds-ventures.com', external: true },
 ];
 
 export default function Footer() {
@@ -62,3 +63,4 @@ export default function Footer() {
     </footer>
   );
 }
+
