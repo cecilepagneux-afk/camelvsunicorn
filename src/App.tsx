@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="bg-[#080c14] text-slate-100 font-sans overflow-x-hidden">
+    <div className="bg-[#070d19] text-slate-100 font-sans overflow-x-hidden">
       <Nav />
       <Hero />
       <Why />
