@@ -75,3 +75,50 @@ body {
     @apply w-full bg-[#0a1324] border border-white/[0.12] focus:border-[#1686ff] px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600;
   }
 }
+
+/* Contact keeps its existing Formspree behaviour; these rules only align its presentation. */
+#contact {
+  background-color: #070d19;
+  background-image:
+    linear-gradient(rgba(22, 134, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 134, 255, 0.045) 1px, transparent 1px);
+  background-size: 80px 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+#contact > div > p:first-child {
+  color: #34d399;
+  font-family: 'DM Mono', monospace;
+}
+
+#contact > div > h2 {
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+#contact form {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1.5rem;
+}
+
+#contact input,
+#contact select {
+  border-radius: 0 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  background: #0a1324 !important;
+}
+
+#contact input:focus,
+#contact select:focus {
+  border-color: #1686ff !important;
+}
+
+#contact button,
+#contact form a {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#contact .flex.gap-3.items-center > span {
+  display: none;
+}
