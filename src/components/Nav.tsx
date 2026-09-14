@@ -5,6 +5,7 @@ const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-australian-mark
 
 const links = [
   ['#why', 'Why Australia'],
+  ['#assessment', 'Assessment'],
   ['#approach', 'How We Help'],
   ['#forwho', 'Who We Work With'],
   ['#about', 'About'],
@@ -33,7 +34,7 @@ export default function Nav() {
         <a href="#" className="flex items-center no-underline">
           <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-20 w-auto object-contain" />
         </a>
-        <ul className="hidden md:flex gap-8 list-none">
+        <ul className="hidden md:flex gap-6 list-none">
           {links.map(([href, label]) => (
             <li key={href}>
               <a href={href} className="text-slate-400 no-underline text-sm font-medium hover:text-slate-100 transition-colors">{label}</a>

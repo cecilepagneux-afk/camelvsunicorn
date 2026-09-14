@@ -51,6 +51,14 @@
           sendGAEvent('generate_lead', {method:'calendly', label: label});
         }
 
+        if (href === '#assessment') {
+          sendGAEvent('assessment_interest', {label: label});
+        }
+
+        if (a.dataset.assessmentCta === 'request-access') {
+          sendGAEvent('assessment_access_request', {label: label});
+        }
+
         if (label.includes('Propose Your Business')) {
           sendGAEvent('cta_click', {button:'propose_business', label: label});
         }

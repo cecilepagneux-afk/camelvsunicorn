@@ -36,13 +36,13 @@ export default function Hero() {
             className="bg-[#1A6ED4] hover:bg-[#1558b0] text-white px-8 py-3.5 rounded-xl font-bold text-[0.95rem] no-underline transition-all shadow-[0_0_24px_rgba(26,110,212,0.35)] hover:shadow-[0_0_36px_rgba(26,110,212,0.5)] hover:-translate-y-px">
             Start a conversation →
           </a>
-          <a href="#approach" className="bg-transparent text-slate-100 border border-white/10 hover:border-white/25 hover:bg-white/[0.04] px-8 py-3.5 rounded-xl font-semibold text-[0.95rem] no-underline transition-all flex items-center gap-2">
-            How we help
+          <a href="#assessment" className="bg-transparent text-slate-100 border border-white/10 hover:border-white/25 hover:bg-white/[0.04] px-8 py-3.5 rounded-xl font-semibold text-[0.95rem] no-underline transition-all flex items-center gap-2">
+            Assess your market readiness
           </a>
         </div>
 
         <div className="flex justify-center gap-12 mt-16 pt-10 border-t border-white/[0.08] flex-wrap">
-          {[['12 months','To commercial traction'],['5 sectors','Cybersecurity · AI · Energy · Defence · Industrial'],['Perth, WA','On the ground in Australia']].map(([num, label]) => (
+          {[['12 months','Target window to commercial traction'],['Industry focus','Mining · Energy · Defence · Critical infrastructure'],['Perth, WA','On the ground in Australia']].map(([num, label]) => (
             <div key={label} className="text-center">
               <div className="text-[1.6rem] font-extrabold text-[#1A6ED4] font-mono">{num}</div>
               <div className="text-xs text-slate-400 mt-1">{label}</div>
