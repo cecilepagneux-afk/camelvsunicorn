@@ -1,11 +1,18 @@
-import { useState, FormEvent, useRef } from 'react';
+import { useState, FormEvent, useEffect, useRef } from 'react';
 
 const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-australian-market-entry';
 const FORMSPREE_ID = 'xdayyvor';
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [requestType, setRequestType] = useState('');
   const formRef = useRef<HTMLFormElement>(null);
+
+  useEffect(() => {
+    const selectAssessment = () => setRequestType('Private market-entry assessment');
+    window.addEventListener('cvds:assessment-request', selectAssessment);
+    return () => window.removeEventListener('cvds:assessment-request', selectAssessment);
+  }, []);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -24,6 +31,7 @@ export default function Contact() {
       if (res.ok) {
         setStatus('success');
         form.reset();
+        setRequestType('');
       } else {
         setStatus('error');
       }
@@ -64,23 +72,33 @@ export default function Contact() {
 
           {/* Form */}
           <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-4">
+            <div>
+              <label htmlFor="request_type" className="block text-xs font-semibold text-slate-400 mb-1">How can we help?</label>
+              <select id="request_type" name="request_type" required value={requestType} onChange={(event) => setRequestType(event.target.value)} className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-400 text-sm outline-none transition-colors">
+                <option value="" disabled>Select a request</option>
+                <option value="Private market-entry assessment">Private market-entry assessment</option>
+                <option value="Introductory conversation">Introductory conversation</option>
+                <option value="Pilot or deployment opportunity">Pilot or deployment opportunity</option>
+                <option value="Partnership enquiry">Partnership enquiry</option>
+              </select>
+            </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
-                <label className="block text-xs font-semibold text-slate-400 mb-1">First name</label>
-                <input name="first_name" type="text" placeholder="Jane" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
+                <label htmlFor="first_name" className="block text-xs font-semibold text-slate-400 mb-1">First name</label>
+                <input id="first_name" name="first_name" type="text" autoComplete="given-name" placeholder="Jane" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
               </div>
               <div>
-                <label className="block text-xs font-semibold text-slate-400 mb-1">Last name</label>
-                <input name="last_name" type="text" placeholder="Smith" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
+                <label htmlFor="last_name" className="block text-xs font-semibold text-slate-400 mb-1">Last name</label>
+                <input id="last_name" name="last_name" type="text" autoComplete="family-name" placeholder="Smith" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
               </div>
             </div>
             <div>
-              <label className="block text-xs font-semibold text-slate-400 mb-1">Work email</label>
-              <input name="email" type="email" placeholder="jane@acme.com" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
+              <label htmlFor="email" className="block text-xs font-semibold text-slate-400 mb-1">Work email</label>
+              <input id="email" name="email" type="email" autoComplete="email" placeholder="jane@acme.com" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
             </div>
             <div>
-              <label className="block text-xs font-semibold text-slate-400 mb-1">Technology sector</label>
-              <select name="sector" className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-400 text-sm outline-none transition-colors">
+              <label htmlFor="sector" className="block text-xs font-semibold text-slate-400 mb-1">Technology sector</label>
+              <select id="sector" name="sector" className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-400 text-sm outline-none transition-colors">
                 <option value="">Select your sector</option>
                 {['Cybersecurity','Industrial Systems & Automation','AI / Machine Learning','Energy Technology','Defence Technology','Critical Infrastructure','Other'].map(o => <option key={o}>{o}</option>)}
               </select>
@@ -96,8 +114,8 @@ export default function Contact() {
               }`}
             >
               {status === 'sending' ? 'Sending…' :
-               status === 'success' ? '✓ Sent — book your intro call below' :
-               'Request an intro call →'}
+               status === 'success' ? '✓ Request received' :
+               'Send your request →'}
             </button>
 
             {status === 'error' && (
@@ -107,7 +125,7 @@ export default function Contact() {
             {status === 'success' && (
               <a href={CALENDLY} target="_blank" rel="noopener noreferrer"
                 className="w-full py-3.5 rounded-xl font-bold text-base text-white text-center no-underline bg-emerald-600 hover:bg-emerald-700 transition-all block">
-                Open Calendly — pick a time →
+                Prefer to talk now? Book a confidential call →
               </a>
             )}
           </form>
