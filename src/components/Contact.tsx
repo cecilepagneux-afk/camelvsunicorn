@@ -44,16 +44,16 @@ export default function Contact() {
     <section id="contact" className="bg-[#0d1422] px-[5%] py-24">
       <div className="max-w-[1100px] mx-auto">
         <p className="font-mono text-[0.7rem] tracking-[0.15em] text-blue-400 uppercase mb-3 before:content-['//\00a0'] before:opacity-50">Contact</p>
-        <h2 className="text-[clamp(1.9rem,3.5vw,2.6rem)] font-extrabold tracking-tight mb-5">Ready to enter the Australian market?</h2>
+        <h2 className="text-[clamp(1.9rem,3.5vw,2.6rem)] font-extrabold tracking-tight mb-5">Choose the right next step</h2>
         <p className="text-slate-400 text-[1.05rem] max-w-[580px] leading-[1.75] mb-14">
-          If your technology is ready for real-world deployment — and you're serious about Australia — let's talk.
+          Request the private assessment, explore a deployment opportunity or start a confidential market-entry conversation.
         </p>
         <div className="grid md:grid-cols-[1fr_1.3fr] gap-16 items-start">
           {/* Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Start a confidential conversation</h3>
+            <h3 className="text-lg font-bold mb-4">A focused first exchange</h3>
             <p className="text-slate-400 text-sm leading-[1.8] mb-6">
-              We work with a select number of companies at any given time. Reach out to start an honest conversation about your technology, your goals, and whether CVDS is the right partner for your Australian entry.
+              Tell us what you are trying to achieve and where you are in the process. We will respond with the most useful next step — including a direct answer when CVDS is not the right fit.
             </p>
             <div className="flex gap-3 items-center text-sm text-slate-400 mb-3">
               <span className="text-[#1A6ED4]">📍</span> Perth, Western Australia

@@ -28,7 +28,7 @@ export default function ForWho() {
         <p className="font-mono text-[0.7rem] tracking-[0.15em] text-[#1A6ED4] uppercase mb-3 before:content-['//\00a0'] before:opacity-50">Who we work with</p>
         <h2 className="text-[clamp(1.9rem,3.5vw,2.6rem)] font-extrabold tracking-tight text-slate-900 mb-5">Built for companies serious about Australia</h2>
         <p className="text-slate-500 text-[1.05rem] max-w-[580px] leading-[1.75] mb-14">
-          We work with a select number of companies at any time. We are not a connector. We are a deployment partner — which means we are selective.
+          Fit is defined less by company size than by readiness: proven technology, a credible industrial use case and the capacity to act on market feedback.
         </p>
         <div className="grid md:grid-cols-3 gap-5">
           {cards.map(c => (

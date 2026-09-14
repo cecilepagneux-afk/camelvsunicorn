@@ -52,16 +52,13 @@ export default function About() {
           <div className="flex flex-col gap-8">
             <div className="flex flex-col gap-4 text-slate-400 text-[0.95rem] leading-[1.8]">
               <p>
-                <strong className="text-white">CVDS Digital Ventures was founded by Cécile Pagneux</strong> — a French-born business development leader with over 20 years of experience building commercial operations across Europe and Australia.
+                <strong className="text-white">Cécile Pagneux has built commercial operations across Europe for more than 20 years</strong>, including senior roles at IBM Global Services, Avanade, ALTEN and APSIDE. As Country Manager for APSIDE Belgium, she grew recurring revenue from €400K to €6.7M and led a team of 60 consultants.
               </p>
               <p>
-                Her career spans senior roles at <strong className="text-slate-200">IBM Global Services</strong>, <strong className="text-slate-200">Avanade</strong>, <strong className="text-slate-200">ALTEN</strong>, and <strong className="text-slate-200">APSIDE</strong> — where she grew a national operation from €400K to €6.7M in recurring revenue, managing a team of 60 consultants with consistent double-digit annual growth.
+                Since moving to Perth in 2024, she has worked directly across Australia's mining, energy and technology ecosystem. That dual perspective helps international companies distinguish what can transfer from their home market — and what must be rebuilt locally.
               </p>
-              <p>
-                Based in Perth since 2024, Cécile brings a rare combination: deep European technology market experience, direct relationships inside Australia's mining, energy, and defence sectors, and a proven track record of building revenue where none existed before.
-              </p>
-              <p className="text-slate-300 italic border-l-2 border-[#1A6ED4] pl-4">
-                "I know what it takes to open a market from scratch — and I know how different Australia is from anywhere else. That's exactly why CVDS exists."
+              <p className="text-slate-300 border-l-2 border-[#1A6ED4] pl-4">
+                For clients, this means commercial challenge as well as support: assumptions are tested early, priorities stay explicit and activity is tied to evidence from the market.
               </p>
             </div>
 
