@@ -1,60 +1,58 @@
-const cards = [
+const profiles = [
   {
-    icon: '🛡️',
+    code: 'CYB',
     title: 'Cybersecurity companies',
-    desc: "OT/IT security, threat intelligence, and critical infrastructure protection. Australia's regulatory environment is creating urgent demand.",
-    criteria: ['Proven solution in production elsewhere','Ready for industrial-scale deployment','No Australian presence yet'],
+    desc: "OT/IT security, threat intelligence and critical infrastructure protection for Australia's regulated environments.",
+    criteria: ['Proven solution in production elsewhere', 'Ready for industrial-scale deployment', 'No Australian presence yet'],
   },
   {
-    icon: '🤖',
-    title: 'AI & Industrial Tech startups',
-    desc: 'Applied AI for asset management, predictive maintenance, automation, and autonomous systems in mining, energy or heavy industry.',
-    criteria: ['Operational-ready technology (not R&D stage)','Clear ROI case for industrial operators','Willing to commit to a real pilot'],
+    code: 'IND',
+    title: 'AI & Industrial Tech',
+    desc: 'Applied AI, asset management, predictive maintenance, automation and autonomous systems for heavy industry.',
+    criteria: ['Operational-ready technology', 'Clear ROI case for operators', 'Willing to test a focused use case'],
   },
   {
-    icon: '⚡',
-    title: 'Energy & Defence tech companies',
-    desc: "Clean energy transition, grid security, defence dual-use technologies, and critical infrastructure solutions targeting Australia's strategic priorities.",
-    criteria: ['Technology with defence or strategic relevance','Experience with regulated environments','Committed to long-term AU market presence'],
+    code: 'ENR',
+    title: 'Energy & Defence tech',
+    desc: "Energy transition, grid security, dual-use technologies and critical infrastructure solutions.",
+    criteria: ['Strategic or operational relevance', 'Experience in regulated environments', 'Long-term Australian ambition'],
   },
 ];
 
-const notFit = ['Early-stage R&D (pre-product)','B2C or consumer technology','Looking for a one-off introduction','No commitment to the Australian market long-term','No operational deployment evidence elsewhere'];
+const notFit = ['Pre-product R&D','B2C technology','One-off introductions','No long-term market commitment','No deployment evidence'];
 
 export default function ForWho() {
   return (
-    <section id="forwho" className="bg-slate-50 px-[5%] py-24">
-      <div className="max-w-[1100px] mx-auto">
-        <p className="font-mono text-[0.7rem] tracking-[0.15em] text-[#1A6ED4] uppercase mb-3 before:content-['//\00a0'] before:opacity-50">Who we work with</p>
-        <h2 className="text-[clamp(1.9rem,3.5vw,2.6rem)] font-extrabold tracking-tight text-slate-900 mb-5">Built for companies serious about Australia</h2>
-        <p className="text-slate-500 text-[1.05rem] max-w-[580px] leading-[1.75] mb-14">
+    <section id="forwho" className="cvds-section bg-[#0a1324]">
+      <div className="max-w-[1200px] mx-auto">
+        <p className="cvds-kicker">Who we work with</p>
+        <h2 className="cvds-heading mb-5">Built for companies serious about Australia</h2>
+        <p className="cvds-intro max-w-[650px] mb-14">
           Fit is defined less by company size than by readiness: proven technology, a credible industrial use case and the capacity to act on market feedback.
         </p>
-        <div className="grid md:grid-cols-3 gap-5">
-          {cards.map(c => (
-            <div key={c.title} className="bg-white border border-black/[0.07] rounded-xl p-8 hover:border-[rgba(26,110,212,0.3)] hover:shadow-[0_4px_20px_rgba(26,110,212,0.1)] hover:-translate-y-0.5 transition-all shadow-sm">
-              <div className="text-3xl mb-4">{c.icon}</div>
-              <h3 className="text-base font-bold text-slate-900 mb-2">{c.title}</h3>
-              <p className="text-sm text-slate-500 leading-[1.65] mb-4">{c.desc}</p>
-              <div className="flex flex-col gap-1.5">
-                {c.criteria.map(cr => (
-                  <div key={cr} className="text-[0.8rem] text-slate-500 flex gap-2 items-start">
-                    <span className="text-emerald-500 font-bold flex-shrink-0">✓</span>{cr}
-                  </div>
+
+        <div className="grid md:grid-cols-3 border-t border-l border-white/[0.12]">
+          {profiles.map(profile => (
+            <article key={profile.title} className="border-r border-b border-white/[0.12] p-7 lg:p-8 hover:bg-[#1686ff]/[0.05] transition-colors">
+              <p className="font-mono text-[0.68rem] tracking-[0.12em] text-emerald-400 mb-8">{profile.code} / AU</p>
+              <h3 className="text-lg font-semibold mb-3">{profile.title}</h3>
+              <p className="text-sm text-slate-400 leading-[1.7] mb-6">{profile.desc}</p>
+              <div className="border-t border-white/[0.1]">
+                {profile.criteria.map(criterion => (
+                  <p key={criterion} className="flex gap-3 border-b border-white/[0.08] py-3 text-xs text-slate-400">
+                    <span className="text-[#1686ff]" aria-hidden="true">→</span>{criterion}
+                  </p>
                 ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
 
-        {/* Not a fit */}
-        <div className="bg-red-50 border border-red-200/50 rounded-xl px-8 py-6 mt-10">
-          <h4 className="text-sm font-bold text-red-600 mb-4">Not the right fit for CVDS</h4>
-          <div className="flex gap-6 flex-wrap">
-            {notFit.map(n => (
-              <div key={n} className="flex gap-2 items-center text-sm text-slate-500">
-                <span className="text-red-500 font-bold">✕</span>{n}
-              </div>
+        <div className="grid lg:grid-cols-[220px_1fr] gap-6 border-t border-white/[0.12] mt-10 pt-6">
+          <h3 className="font-mono text-[0.68rem] uppercase tracking-[0.12em] text-slate-500">Not the right fit</h3>
+          <div className="flex gap-x-7 gap-y-3 flex-wrap">
+            {notFit.map(item => (
+              <span key={item} className="text-xs text-slate-500 before:content-['×'] before:text-slate-600 before:mr-2">{item}</span>
             ))}
           </div>
         </div>
