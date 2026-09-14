@@ -1,6 +1,7 @@
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import Why from './components/Why';
+import AssessmentInvite from './components/AssessmentInvite';
 import Approach from './components/Approach';
 import ForWho from './components/ForWho';
 import About from './components/About';
@@ -14,6 +15,7 @@ export default function App() {
       <Nav />
       <Hero />
       <Why />
+      <AssessmentInvite />
       <Approach />
       <ForWho />
       <About />
