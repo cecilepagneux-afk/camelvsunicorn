@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Sora:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -9,10 +9,116 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  margin: 0;
+  background: #070d19;
+  color: #f5f8ff;
+  font-family: 'Sora', sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 .font-mono {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'DM Mono', monospace;
+}
+
+::selection {
+  background: rgba(22, 134, 255, 0.35);
+  color: #fff;
+}
+
+@layer components {
+  .cvds-section {
+    @apply relative px-[5%] py-24 border-t border-white/[0.09];
+  }
+
+  .cvds-grid-bg {
+    background-image:
+      linear-gradient(rgba(22, 134, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(22, 134, 255, 0.045) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+
+  .cvds-kicker {
+    @apply font-mono text-[0.7rem] tracking-[0.14em] text-emerald-400 uppercase mb-4;
+  }
+
+  .cvds-kicker::before {
+    content: '[ ';
+    color: #1686ff;
+  }
+
+  .cvds-kicker::after {
+    content: ' ]';
+    color: #1686ff;
+  }
+
+  .cvds-heading {
+    @apply text-[clamp(2rem,4vw,3.25rem)] font-semibold tracking-[-0.04em] leading-[1.08];
+  }
+
+  .cvds-intro {
+    @apply text-slate-400 text-[1rem] leading-[1.8];
+  }
+
+  .cvds-primary {
+    @apply inline-flex items-center justify-center bg-[#1686ff] hover:bg-[#0875e9] text-white px-6 py-3.5 font-semibold text-sm no-underline transition-colors;
+  }
+
+  .cvds-secondary {
+    @apply inline-flex items-center justify-center border border-white/[0.16] hover:border-[#1686ff] hover:bg-[#1686ff]/10 text-slate-100 px-6 py-3.5 font-medium text-sm no-underline transition-colors;
+  }
+
+  .cvds-line-row {
+    @apply border-t border-white/[0.1] py-5;
+  }
+
+  .cvds-field {
+    @apply w-full bg-[#0a1324] border border-white/[0.12] focus:border-[#1686ff] px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600;
+  }
+}
+
+/* Contact keeps its existing Formspree behaviour; these rules only align its presentation. */
+#contact {
+  background-color: #070d19;
+  background-image:
+    linear-gradient(rgba(22, 134, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(22, 134, 255, 0.045) 1px, transparent 1px);
+  background-size: 80px 80px;
+  border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+#contact > div > p:first-child {
+  color: #34d399;
+  font-family: 'DM Mono', monospace;
+}
+
+#contact > div > h2 {
+  font-weight: 600;
+  letter-spacing: -0.04em;
+}
+
+#contact form {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1.5rem;
+}
+
+#contact input,
+#contact select {
+  border-radius: 0 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+  background: #0a1324 !important;
+}
+
+#contact input:focus,
+#contact select:focus {
+  border-color: #1686ff !important;
+}
+
+#contact button,
+#contact form a {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+#contact .flex.gap-3.items-center > span {
+  display: none;
 }
