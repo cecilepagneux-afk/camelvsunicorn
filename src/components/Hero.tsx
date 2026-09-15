@@ -21,8 +21,8 @@ export default function Hero() {
             CVDS helps international technology companies validate demand, navigate local complexity and build the execution capacity required to enter Australia.
           </p>
           <div className="flex gap-4 flex-wrap">
-            <a href="#assessment" className="cvds-primary">Assess your entry readiness →</a>
-            <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="cvds-secondary">Start a conversation</a>
+            <a href={CALENDLY} target="_blank" rel="noopener noreferrer" className="cvds-primary">Book a 30-min intro call →</a>
+            <a href="#contact" className="cvds-secondary">Send a request</a>
           </div>
         </div>
 
@@ -30,7 +30,7 @@ export default function Hero() {
           <div className="w-full border border-white/[0.14] bg-[#0a1324]/95">
             <div className="flex items-center justify-between gap-4 px-5 py-4 border-b border-white/[0.1] font-mono text-[0.65rem] uppercase tracking-[0.1em] text-slate-500">
               <span>Entry readiness / AU</span>
-              <span className="flex items-center gap-2 text-emerald-400 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-emerald-400">Private tool</span>
+              <span className="flex items-center gap-2 text-emerald-400 before:content-[''] before:w-1.5 before:h-1.5 before:rounded-full before:bg-emerald-400">On request</span>
             </div>
             <div className="p-6 sm:p-8">
               <p className="font-mono text-[0.65rem] uppercase tracking-[0.12em] text-[#1686ff] mb-3">Diagnostic preview</p>
@@ -47,7 +47,7 @@ export default function Hero() {
               ))}
               <div className="flex justify-between gap-4 items-center border-t border-white/[0.1] pt-5 mt-2">
                 <span className="font-mono text-[0.65rem] text-slate-500">6 dimensions · 3 minutes</span>
-                <a href="#assessment" className="text-sm font-medium text-emerald-400 no-underline">Request access →</a>
+                <a href="#contact" onClick={() => window.dispatchEvent(new CustomEvent('cvds:request-type', { detail: 'Australian market-entry assessment' }))} className="text-sm font-medium text-emerald-400 no-underline">Request the assessment →</a>
               </div>
             </div>
           </div>

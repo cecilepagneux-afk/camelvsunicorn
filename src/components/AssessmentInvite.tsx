@@ -24,7 +24,7 @@ export default function AssessmentInvite() {
               Australia market-entry assessment
             </p>
             <span className="border-l border-emerald-400/50 pl-3 text-[0.62rem] font-mono uppercase tracking-[0.1em] text-emerald-300">
-              Private pilot
+              On request
             </span>
           </div>
 
@@ -50,13 +50,13 @@ export default function AssessmentInvite() {
           <a
             href="#contact"
             data-assessment-cta="request-access"
-            onClick={() => window.dispatchEvent(new CustomEvent('cvds:assessment-request'))}
+            onClick={() => window.dispatchEvent(new CustomEvent('cvds:request-type', { detail: 'Australian market-entry assessment' }))}
             className="cvds-primary"
           >
-            Request private access →
+            Request the assessment →
           </a>
           <p className="mt-3 text-xs text-slate-500">
-            Access is granted individually to selected companies. The assessment takes approximately three minutes.
+            Request the assessment and we will send it to you directly. It takes about three minutes.
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export default function AssessmentInvite() {
           <div className="relative">
             <div className="flex justify-between gap-4 border-b border-white/[0.1] pb-4 mb-6">
               <p className="font-mono text-[0.65rem] uppercase tracking-[0.12em] text-[#1686ff]">Your assessment</p>
-              <p className="font-mono text-[0.62rem] uppercase tracking-[0.1em] text-emerald-400">Private access</p>
+              <p className="font-mono text-[0.62rem] uppercase tracking-[0.1em] text-emerald-400">On request</p>
             </div>
             <h3 className="text-xl font-semibold tracking-[-0.02em] mb-6">A concise, commercially grounded diagnosis</h3>
             <div className="flex flex-col gap-4">

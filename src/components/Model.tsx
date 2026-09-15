@@ -39,7 +39,7 @@ export default function Model() {
             </p>
             <a href={CALENDLY} target="_blank" rel="noopener noreferrer"
               className="cvds-primary">
-              Start a conversation →
+              Book a 30-min intro call →
             </a>
           </div>
         </div>

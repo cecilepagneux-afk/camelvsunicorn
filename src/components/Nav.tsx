@@ -31,7 +31,7 @@ export default function Nav() {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 grid grid-cols-[1fr_auto] md:grid-cols-[180px_1fr_auto] items-center gap-6 px-[5%] h-[76px] transition-all ${scrolled || menuOpen ? 'bg-[rgba(7,13,25,0.96)] backdrop-blur-lg border-b border-white/[0.1]' : 'bg-[rgba(7,13,25,0.72)] backdrop-blur-sm border-b border-white/[0.06]'}`}>
-        <a href="#" className="flex items-center no-underline">
+        <a href="#hero" className="flex items-center no-underline">
           <img src={cvdsLogo} alt="CVDS Digital Ventures" className="h-[64px] w-auto object-contain" />
         </a>
         <ul className="hidden md:flex justify-center gap-6 list-none">
@@ -43,7 +43,7 @@ export default function Nav() {
         </ul>
         <a href={CALENDLY} target="_blank" rel="noopener noreferrer"
           className="hidden md:inline-block border border-[#1686ff] bg-[#1686ff]/10 hover:bg-[#1686ff] text-white px-4 py-2.5 text-xs font-semibold no-underline transition-colors whitespace-nowrap">
-          Start a conversation
+          Book an intro call
         </a>
         <button
           onClick={() => setMenuOpen(o => !o)}
@@ -65,7 +65,7 @@ export default function Nav() {
         </ul>
         <div className="px-[5%] pt-8">
           <a href={CALENDLY} target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)} className="block w-full bg-[#1686ff] hover:bg-[#0875e9] text-white px-5 py-4 text-base font-semibold no-underline transition-colors text-center">
-            Start a conversation
+            Book an intro call
           </a>
         </div>
       </div>
