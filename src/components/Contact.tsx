@@ -2,6 +2,7 @@ import { useState, FormEvent, useEffect, useRef } from 'react';
 
 const CALENDLY = 'https://calendly.com/cecile-pagneux/intro-call-australian-market-entry';
 const FORMSPREE_ID = 'xdayyvor';
+const FIELD = 'w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600';
 
 export default function Contact() {
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
@@ -9,9 +10,9 @@ export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
-    const selectAssessment = () => setRequestType('Private market-entry assessment');
-    window.addEventListener('cvds:assessment-request', selectAssessment);
-    return () => window.removeEventListener('cvds:assessment-request', selectAssessment);
+    const selectType = (event: Event) => setRequestType((event as CustomEvent<string>).detail);
+    window.addEventListener('cvds:request-type', selectType);
+    return () => window.removeEventListener('cvds:request-type', selectType);
   }, []);
 
   const handleSubmit = async (e: FormEvent) => {
@@ -46,7 +47,7 @@ export default function Contact() {
         <p className="font-mono text-[0.7rem] tracking-[0.15em] text-blue-400 uppercase mb-3 before:content-['//\00a0'] before:opacity-50">Contact</p>
         <h2 className="text-[clamp(1.9rem,3.5vw,2.6rem)] font-extrabold tracking-tight mb-5">Choose the right next step</h2>
         <p className="text-slate-400 text-[1.05rem] max-w-[580px] leading-[1.75] mb-14">
-          Request the private assessment, explore a deployment opportunity or start a confidential market-entry conversation.
+          Request the market-entry assessment, explore a deployment opportunity or start a confidential market-entry conversation.
         </p>
         <div className="grid md:grid-cols-[1fr_1.3fr] gap-16 items-start">
           {/* Info */}
@@ -96,6 +97,20 @@ export default function Contact() {
               <label htmlFor="email" className="block text-xs font-semibold text-slate-400 mb-1">Work email</label>
               <input id="email" name="email" type="email" autoComplete="email" placeholder="jane@acme.com" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
             </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label htmlFor="company" className="block text-xs font-semibold text-slate-400 mb-1">Company</label>
+                <input id="company" name="company" type="text" autoComplete="organization" placeholder="Acme Security" required className={FIELD} />
+              </div>
+              <div>
+                <label htmlFor="country" className="block text-xs font-semibold text-slate-400 mb-1">Country (HQ)</label>
+                <input id="country" name="country" type="text" autoComplete="country-name" placeholder="France" required className={FIELD} />
+              </div>
+            </div>
+            <div>
+              <label htmlFor="website" className="block text-xs font-semibold text-slate-400 mb-1">Website <span className="font-normal text-slate-500">(optional)</span></label>
+              <input id="website" name="website" type="text" autoComplete="url" placeholder="acme.com" className={FIELD} />
+            </div>
             <div>
               <label htmlFor="sector" className="block text-xs font-semibold text-slate-400 mb-1">Technology sector</label>
               <select id="sector" name="sector" className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-400 text-sm outline-none transition-colors">
@@ -103,6 +118,14 @@ export default function Contact() {
                 {['Cybersecurity','Industrial Systems & Automation','AI / Machine Learning','Energy Technology','Defence Technology','Critical Infrastructure','Other'].map(o => <option key={o}>{o}</option>)}
               </select>
             </div>
+            <div>
+              <label htmlFor="message" className="block text-xs font-semibold text-slate-400 mb-1">What are you trying to achieve in Australia?</label>
+              <textarea id="message" name="message" rows={4} required placeholder="e.g. first pilot with a WA mining operator within 6 months" className={`${FIELD} resize-y`} />
+            </div>
+            <label className="flex gap-2.5 items-start text-xs text-slate-400 leading-[1.6] cursor-pointer">
+              <input type="checkbox" name="privacy_consent" value="yes" required className="mt-0.5 accent-[#1A6ED4]" />
+              <span>I agree that CVDS Digital Ventures may use these details to respond to my enquiry, as described in the <a href="/privacy.html" target="_blank" rel="noopener noreferrer" className="text-blue-400 underline">Privacy Policy</a>.</span>
+            </label>
 
             <button
               type="submit"
@@ -119,7 +142,11 @@ export default function Contact() {
             </button>
 
             {status === 'error' && (
-              <p className="text-red-400 text-xs text-center">Something went wrong. Please try again or email us directly.</p>
+              <p className="text-red-400 text-xs text-center">Something went wrong. Please try again or email cecile.pagneux@cvds-ventures.com.</p>
+            )}
+
+            {status === 'success' && (
+              <p className="text-emerald-400 text-sm text-center">Thanks — your request is received. We will reply within 3 business days.</p>
             )}
 
             {status === 'success' && (
