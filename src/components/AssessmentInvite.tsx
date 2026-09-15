@@ -50,7 +50,7 @@ export default function AssessmentInvite() {
           <a
             href="#contact"
             data-assessment-cta="request-access"
-            onClick={() => window.dispatchEvent(new CustomEvent('cvds:request-type', { detail: 'Private market-entry assessment' }))}
+            onClick={() => window.dispatchEvent(new CustomEvent('cvds:request-type', { detail: 'Australian market-entry assessment' }))}
             className="cvds-primary"
           >
             Request the assessment →

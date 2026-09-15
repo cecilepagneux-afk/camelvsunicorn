@@ -77,13 +77,13 @@ export default function Contact() {
               <label htmlFor="request_type" className="block text-xs font-semibold text-slate-400 mb-1">How can we help?</label>
               <select id="request_type" name="request_type" required value={requestType} onChange={(event) => setRequestType(event.target.value)} className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-400 text-sm outline-none transition-colors">
                 <option value="" disabled>Select a request</option>
-                <option value="Private market-entry assessment">Private market-entry assessment</option>
+                <option value="Australian market-entry assessment">Australian market-entry assessment</option>
                 <option value="Introductory conversation">Introductory conversation</option>
                 <option value="Pilot or deployment opportunity">Pilot or deployment opportunity</option>
                 <option value="Partnership enquiry">Partnership enquiry</option>
               </select>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="first_name" className="block text-xs font-semibold text-slate-400 mb-1">First name</label>
                 <input id="first_name" name="first_name" type="text" autoComplete="given-name" placeholder="Jane" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
@@ -97,7 +97,7 @@ export default function Contact() {
               <label htmlFor="email" className="block text-xs font-semibold text-slate-400 mb-1">Work email</label>
               <input id="email" name="email" type="email" autoComplete="email" placeholder="jane@acme.com" required className="w-full bg-[#111827] border border-white/[0.08] focus:border-[#1A6ED4] rounded-lg px-4 py-3 text-slate-100 text-sm outline-none transition-colors placeholder:text-slate-600" />
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label htmlFor="company" className="block text-xs font-semibold text-slate-400 mb-1">Company</label>
                 <input id="company" name="company" type="text" autoComplete="organization" placeholder="Acme Security" required className={FIELD} />

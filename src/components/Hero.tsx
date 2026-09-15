@@ -47,7 +47,7 @@ export default function Hero() {
               ))}
               <div className="flex justify-between gap-4 items-center border-t border-white/[0.1] pt-5 mt-2">
                 <span className="font-mono text-[0.65rem] text-slate-500">6 dimensions · 3 minutes</span>
-                <a href="#contact" onClick={() => window.dispatchEvent(new CustomEvent('cvds:request-type', { detail: 'Private market-entry assessment' }))} className="text-sm font-medium text-emerald-400 no-underline">Request the assessment →</a>
+                <a href="#contact" onClick={() => window.dispatchEvent(new CustomEvent('cvds:request-type', { detail: 'Australian market-entry assessment' }))} className="text-sm font-medium text-emerald-400 no-underline">Request the assessment →</a>
               </div>
             </div>
           </div>
